@@ -1,4 +1,7 @@
-# Workshops web to print
+## [WORKSHOP WEB⦘TO⦘PRINT pour les débutant✺es bricoleur✺euses](https://faure-cecile.xyz/index-workshop.html)  
+ORGANISATEUR / INTERVENANT: Cecil Faure (workshop proposé dans le cadre de son diplôme)    
+LIEU: École nationale supérieure des arts visuels de La Cambre   
+DATES: 2023.06.06   
 
 ## [Coo’print](https://workshops.juhel-quentin.fr/esaat_roubaix/site/)  
 ORGANISATEUR: ESAAT Roubaix   
@@ -45,7 +48,14 @@ LIEU: École européenne supérieure d'art de Bretagne de Lorient
 DATES: 2021  
 RÉSULTATS: [Voir les résultats et documentation](https://sarahgarcin.com/workshops/prepostprint-lorient/)  
 
-## [Scripter Gutenberg: dès publications de papier et d'écran]([https://workshops.julie-blanc.fr/2020-esad-orleans/)  
+## [Web to print](https://workshops.juhel-quentin.fr/orleans/)  
+ORGANISATEUR: ESAD Orléans      
+INTERVENANT: Quentin Juhel     
+LIEU: École Supérieure d'arts et de design d'Orléans (hors les murs)
+DATES: 2020.04 
+RÉSULTATS: [Travaux dans la page](https://workshops.juhel-quentin.fr/orleans/)  
+
+## [Scripter Gutenberg: dès publications de papier et d'écran](https://workshops.julie-blanc.fr/2020-esad-orleans/)  
 ORGANISATEUR: Julie Blanc & Lucile Haute          
 INTERVENANT: Julie Blanc      
 LIEU: École Supérieure d'arts et de design d'Orléans  
@@ -67,7 +77,7 @@ LIEU: École Nationale Supérieure des Art Décoratifs
 DATES: 2020    
 RÉSULTATS: [Travaux en bas de page](https://workshops.julie-blanc.fr/2020-mrc-ensad/)  
 
-## [Les Écrits du Numérique #4 Édition expérimentale](https://gitlab.com/bonjour-monde/projects/ensad-mrc-hybridation)  
+## [Les Écrits du Numérique #4 Édition expérimentale](https://projekt.unimes.fr/les-ecrits-du-numerique-4-edition-experimentale/)  
 ORGANISATEUR: Alphabetville (Colette Tron) & La Marelle (Pascal Jourdana)   
 INTERVENANTS: Lucile Haute, Julie Blanc & Quentin Juhel     
 LIEU: Friche la Belle de Mai     
@@ -80,7 +90,7 @@ INTERVENANTS: Bonjour Monde
 LIEU: École Nationale Supérieure des Art Décoratifs     
 DATES: 2018.10.15  
 
-## [HTML_Sauce Cocktail](https://workshops.juhel-quentin.fr/esaat_roubaix/site/)  
+## [HTML_Sauce Cocktail](https://github.com/HEAR/HTML_sauce-cocktail-workshop-OSP)  
 ORGANISATEUR: OSP  
 INTERVENANT: Stéphanie Vilayphiou, Colm O’Neill et Ludi   
 LIEU: Haute École des Arts du Rhin     
@@ -97,4 +107,3 @@ ORGANISATEUR / INTERVENANT: Raphaël Bastide
 LIEU: Campus Fonderie de l'image     
 DATES: 2014   
 RÉSULTATS: [Consulter les travaux des élèves](https://raphaelbastide.com/workshops/dispersive/)  
-
