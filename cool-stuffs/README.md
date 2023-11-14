@@ -10,12 +10,16 @@ Each program allows to reconsider the action of drawing by adding constraints or
 <br>
 <img src="Each-page-a-function/epaf1.png" width="200"/>
 <img src="Each-page-a-function/epaf2.png" width="200"/>
-<img src="Each-page-a-function/epaf3.png" width="200"/>
-<img src="Each-page-a-function/epaf4.png" width="200"/>
-<img src="Each-page-a-function/epaf5.png" width="200"/>
+<img src="Each-page-a-function/epaf4.png" width="200"/>  
+<img src="Each-page-a-function/epaf6.png" width="200"/>
+<img src="Each-page-a-function/epaf7.png" width="200"/>
 
 ## La bibliothèque web to print  
 COLLECTE MENÉE PAR: Quentin Juhel et Lucile Haute  
 S'inscrit dans l'initiative PREPOSTPRINT  
 DESCRITPION: Une archive, mobile (entre écoles, bibliothèques et lieux d’expositions), réunissant des éditions imprimées réalisées avec des outils libres et web.  
 [LIEN VERS LE SITE](http://2print.org/)     
+CONTACT: [contact@2print.org](contact@2print.org)  
+[INSTAGRAM](https://www.instagram.com/2print_org/)  
+[GIT](https://gitlab.com/2print.org/2print)  
+
