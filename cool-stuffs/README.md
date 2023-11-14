@@ -6,7 +6,13 @@ DESCRIPTION: This publication combines drawing and programming by presenting 19 
 Each program allows to reconsider the action of drawing by adding constraints or augmentation, but also temporal, spatial or formal behaviours.  
 [LIEN VERS LE ZINE](https://raphaelbastide.com/epaf/zine/)     
 [LEN VERS L'OUTIL](https://raphaelbastide.com/epaf/)   
-[CODE SOURCE](https://gitlab.com/raphaelbastide/epaf/)  
+[CODE SOURCE](https://gitlab.com/raphaelbastide/epaf/)    
+<br>
+<img src="Each-page-a-function/epaf1.png" width="200"/>
+<img src="Each-page-a-function/epaf2.png" width="200"/>
+<img src="Each-page-a-function/epaf3.png" width="200"/>
+<img src="Each-page-a-function/epaf4.png" width="200"/>
+<img src="Each-page-a-function/epaf5.png" width="200"/>
 
 ## La bibliothèque web to print  
 COLLECTE MENÉE PAR: Quentin Juhel et Lucile Haute  
