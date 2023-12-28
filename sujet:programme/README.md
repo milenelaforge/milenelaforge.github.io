@@ -76,7 +76,7 @@ Par exemple : mettre l'accent sur le côté fluide d'un livre en w2p et ne pas a
 
 ## SÉANCE 4 - Mercredi 27 Mars 9h30
 > Montrer un projet en début de séance (cf répertoire cool-stuffs)  
-> Présentation de l'outil Paged.js pour aller plus loin (+ Minute Hack)  
+> Présentation du la conférence Voyage web to print (+ Minute Hack)  
 
 1. Mise en page.
 Développement des pages et accompagnement en live sur pad.
