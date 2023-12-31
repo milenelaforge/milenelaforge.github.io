@@ -16,15 +16,24 @@
 
         // Fetch the content of the Markdown file
         fetch(markdownFileURL)
-            .then(response => response.text())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Error fetching Markdown file: ${response.statusText}`);
+                }
+                return response.text();
+            })
             .then(markdownText => {
+                console.log('Markdown content fetched successfully:', markdownText);
+
                 // Use Marked.js to convert Markdown to HTML
                 const html = marked(markdownText);
 
                 // Insert the HTML into the specified element
                 document.getElementById('markdown-content').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error during fetch:', error.message);
             });
     </script>
 </body>
 </html>
-
