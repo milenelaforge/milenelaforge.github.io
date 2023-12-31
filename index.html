@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site</title>
+    <title>Markdown Viewer</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-    <h1>Contenu de Mon Site</h1>
+    <div id="markdown-content"></div>
 
-    <ul>
-        <li><a href="list-foundry/README.md">Dossier 1 - Fichier 1</a></li>
-        <li><a href="list-workshop-w2p/README.md">Dossier 1 - Fichier 1</a></li>
-        <li><a href="cool-stuffs/README.md">Dossier 1 - Fichier 1</a></li>
-    </ul>
+    <script>
+        // Replace this with the actual URL of your Markdown file
+        const markdownFileURL = 'https://github.com/milenelaforge/milenelaforge.github.io/blob/main/list-foundry/README.md';
+
+        // Fetch the content of the Markdown file
+        fetch(markdownFileURL)
+            .then(response => response.text())
+            .then(markdownText => {
+                // Use Marked.js to convert Markdown to HTML
+                const html = marked(markdownText);
+
+                // Insert the HTML into the specified element
+                document.getElementById('markdown-content').innerHTML = html;
+            });
+    </script>
 </body>
 </html>
+
