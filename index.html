@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Markdown Viewer</title>
-    <!-- Include marked.js script directly from the CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Include marked.js script using a relative path -->
+    <script src="marked.min.js"></script>
 </head>
 <body>
     <h1>Hello</h1>
     <div id="markdown-content"></div>
 
     <script>
+        // Vérifiez si l'objet marked est défini dans la console
+        console.log(marked);
+
         // Ensure marked is defined before using it
         if (typeof marked === 'undefined') {
             throw new Error('marked is not defined. Make sure marked.js is loaded before this script.');
@@ -43,3 +46,4 @@
     </script>
 </body>
 </html>
+
