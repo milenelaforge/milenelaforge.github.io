@@ -9,25 +9,34 @@
 </head>
 <body>
     <h1>Hello</h1>
-    <div id="markdown-content"></div>
+    <div id="markdown-content-1"></div>
+    <div id="markdown-content-2"></div>
 
     <script>
-        // Créer un objet showdown
-        const converter = new showdown.Converter();
+        // Fonction pour charger le contenu Markdown dans une div spécifiée
+        function loadMarkdownIntoDiv(markdownFileURL, targetDivId) {
+            const converter = new showdown.Converter();
 
-        // Remplacer ceci par l'URL réel de votre fichier Markdown
-        const markdownFileURL = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/list-foundry/README.md';
+            // Récupérer le contenu du fichier Markdown
+            fetch(markdownFileURL)
+                .then(response => response.text())
+                .then(markdownText => {
+                    // Utiliser showdown pour convertir le Markdown en HTML
+                    const html = converter.makeHtml(markdownText);
 
-        // Récupérer le contenu du fichier Markdown
-        fetch(markdownFileURL)
-            .then(response => response.text())
-            .then(markdownText => {
-                // Utiliser showdown pour convertir le Markdown en HTML
-                const html = converter.makeHtml(markdownText);
+                    // Insérer le HTML dans l'élément spécifié
+                    document.getElementById(targetDivId).innerHTML = html;
+                });
+        }
 
-                // Insérer le HTML dans l'élément spécifié
-                document.getElementById('markdown-content').innerHTML = html;
-            });
+        // Remplacer les URL par celles des fichiers Markdown que vous souhaitez charger
+        const markdownFileURL1 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/list-foundry/README.md';
+        const markdownFileURL2 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/list-workshop-w2p/README.md';
+
+        // Appeler la fonction pour charger le contenu dans différentes div
+        loadMarkdownIntoDiv(markdownFileURL1, 'markdown-content-1');
+        loadMarkdownIntoDiv(markdownFileURL2, 'markdown-content-2');
     </script>
 </body>
 </html>
+
