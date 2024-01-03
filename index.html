@@ -1,1 +1,40 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Viewer</title>
+    <!-- Include marked.js script first -->
+    <script src="marked.min.js"></script>
+</head>
+<body>
+    <h1>Hello</h1>
+    <div id="markdown-content"></div>
+
+    <script>
+        // Replace this with the actual URL of your Markdown file
+        const markdownFileURL = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/list-foundry/README.md';
+
+        // Fetch the content of the Markdown file
+        fetch(markdownFileURL)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Error fetching Markdown file: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(markdownText => {
+                console.log('Markdown content fetched successfully:', markdownText);
+
+                // Use Marked.js to convert Markdown to HTML
+                const html = marked(markdownText);
+
+                // Insert the HTML into the specified element
+                document.getElementById('markdown-content').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error during fetch:', error.message);
+            });
+    </script>
+</body>
+</html>
