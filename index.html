@@ -12,6 +12,11 @@
     <div id="markdown-content"></div>
 
     <script>
+        // Ensure marked is defined before using it
+        if (typeof marked === 'undefined') {
+            throw new Error('marked is not defined. Make sure marked.js is loaded before this script.');
+        }
+
         // Replace this with the actual URL of your Markdown file
         const markdownFileURL = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/list-foundry/README.md';
 
