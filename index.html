@@ -12,14 +12,6 @@
     <div id="markdown-content"></div>
 
     <script>
-        // Vérifier si l'objet showdown est défini dans la console
-        console.log(showdown);
-
-        // Assurer que showdown est défini avant de l'utiliser
-        if (typeof showdown === 'undefined') {
-            throw new Error('showdown is not defined. Make sure showdown.js is loaded before this script.');
-        }
-
         // Créer un objet showdown
         const converter = new showdown.Converter();
 
@@ -28,23 +20,13 @@
 
         // Récupérer le contenu du fichier Markdown
         fetch(markdownFileURL)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Error fetching Markdown file: ${response.statusText}`);
-                }
-                return response.text();
-            })
+            .then(response => response.text())
             .then(markdownText => {
-                console.log('Markdown content fetched successfully:', markdownText);
-
                 // Utiliser showdown pour convertir le Markdown en HTML
                 const html = converter.makeHtml(markdownText);
 
                 // Insérer le HTML dans l'élément spécifié
                 document.getElementById('markdown-content').innerHTML = html;
-            })
-            .catch(error => {
-                console.error('Error during fetch:', error.message);
             });
     </script>
 </body>
