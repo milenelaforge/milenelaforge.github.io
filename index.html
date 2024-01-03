@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Markdown Viewer</title>
-    <!-- Include marked.js script using a relative path -->
-    <script src="node_modules/marked/marked.min.js"></script>
+    <!-- Inclure showdown.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
 </head>
 <body>
     <h1>Hello</h1>
     <div id="markdown-content"></div>
 
     <script>
-        // Vérifiez si l'objet marked est défini dans la console
-        console.log(marked);
+        // Vérifier si l'objet showdown est défini dans la console
+        console.log(showdown);
 
-        // Ensure marked is defined before using it
-        if (typeof marked === 'undefined') {
-            throw new Error('marked is not defined. Make sure marked.js is loaded before this script.');
+        // Assurer que showdown est défini avant de l'utiliser
+        if (typeof showdown === 'undefined') {
+            throw new Error('showdown is not defined. Make sure showdown.js is loaded before this script.');
         }
 
-        // Replace this with the actual URL of your Markdown file
+        // Créer un objet showdown
+        const converter = new showdown.Converter();
+
+        // Remplacer ceci par l'URL réel de votre fichier Markdown
         const markdownFileURL = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/list-foundry/README.md';
 
-        // Fetch the content of the Markdown file
+        // Récupérer le contenu du fichier Markdown
         fetch(markdownFileURL)
             .then(response => {
                 if (!response.ok) {
@@ -34,10 +37,10 @@
             .then(markdownText => {
                 console.log('Markdown content fetched successfully:', markdownText);
 
-                // Use Marked.js to convert Markdown to HTML
-                const html = marked(markdownText);
+                // Utiliser showdown pour convertir le Markdown en HTML
+                const html = converter.makeHtml(markdownText);
 
-                // Insert the HTML into the specified element
+                // Insérer le HTML dans l'élément spécifié
                 document.getElementById('markdown-content').innerHTML = html;
             })
             .catch(error => {
@@ -46,4 +49,3 @@
     </script>
 </body>
 </html>
-
