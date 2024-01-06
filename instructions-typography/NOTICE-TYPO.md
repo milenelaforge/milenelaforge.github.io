@@ -59,7 +59,7 @@ a::after {
 ## CSS (Style / Apparence)
 
 1. **Définir une famille de caractère** avec ```font-family```
-* Utiliser les réglages par défaut : ```font-family: serif``` ou ```font-family: serif```
+* Utiliser les réglages par défaut : ```font-family: serif``` ou ```font-family: sans-serif```
 * Importer une fonte spécifique avec ```@font-face```
   ```css
   @font-face { 
@@ -70,42 +70,107 @@ a::after {
   p {
     font-family: 'Paragon-Regular', serif;
   }
+---
 
-2. **Définir le corps** avec ```font-size```
+2. **Définir le corps** avec ```font-size```  
 Les tailles de textes peuvent être définies dans plusieurs unités de mesure:
 * Valeurs absolues : en ```px```, en ```pt```
 * Valeurs relatives : en ```vh```, en ```vw```, en ```em```.
   Dans ce cas, elles seront relatives à la taille du support ou de la div dans laquelle le texte est contenu.  
   ```css
   p {
-    font-family: 'Paragon-Regular', serif;
     font-size:20px;
   }
+---
 
-font-size: Le corps de la police.
-font-weight: La graisse de la police
-font-style: Le style de la police (normal, italique, oblique)
+3. **Définir la graisse** avec ```font-weight```  
+L'épaisseur choisie va être définie par le navigateur. Si vous souhaitez un résultat plus controllé, n'oubliez pas que vous pouvez spécifier une police et sa graisse avec ```font-family``` et ```@font-face```
+* ```normal``` correspond à l'épaisseur normale du texte.
+* ```bold``` indique une épaisseur plus importante que la normale.
+* ```bolder``` indique une épaisseur plus importante que la valeur actuelle, en fonction de l'héritage de l'élément parent.
+* ```lighter``` indique une épaisseur plus légère que la valeur actuelle, en fonction de l'héritage de l'élément parent.
+  ```css
+  p {
+    font-weight: lighter;
+  }
+---
 
-2. Couleur
-color: La couleur du texte
+4. **Définir le style** avec ```font-style```  
+Il existe plusieurs options : ```normal```, ```italique``` et ```oblique```.
+  ```css
+  p {
+    font-style: italique;
+  }
+---
 
-3. Alignement du texte
-text-align: L’alignement du texte (left, right, center, justify).
+5. **Définir la couleur** avec ```color```  
+Il existe plusieurs façon de définir une couleur en css: 
+* Nom prédéfini : ```color: white;```, ```color: black;```,…
+* Valeur hexadécimale : ```color: #FFFFFF;```, ```color: #000000;```,…
+* Valeur RGB : ```color: rgb(0,0,0)```, ```color: rgb(255,255,255)```,…
+  ```css
+  p {
+    color: red;
+  }
+---
 
-4. Décoration du texte
-text-decoration: La décoration du texte (underline, overline, line-through, none).
+6. **Aligner le texte** avec ```text-align```  
+Il existe plusieurs options : ```left```, ```right```, ```center``` et ```justify```.
+  ```css
+  p {
+    text-align: left;
+  }
+---  
 
-5. Changement de casse
-text-transform: Transforme le texte en majuscules, minuscules, ou en capitales.
+7. **Décorer le texte** avec ```text-decoration```  
+Il existe plusieurs options : ```underline```, ```overline```, ```line-through``` et ```none```. Cette dernière option permet d'annuler une décoration que le navigateur met par défault (par exemple sur les liens ```<a>```)
+  ```css
+  p {
+    text-decoration: underline;
+  }
+---
 
-6. Hauteur de ligne
-line-height: La hauteur de ligne (interlignage)
+8. **Changer la casse** avec ```text-transform```  
+Il existe plusieurs options :
+* ```uppercase```: capitales
+* ```lowercase```: bas de casse
+* ```capitalize```: capitales sur première lettre
+  ```css
+  p {
+    text-transform: uppercase;
+  }
+---
 
-7. Espacement des lettres
-letter-spacing: L’espacement entre les lettres (interlettrage)
+8. **Définir l'interlignage** avec ```line-height```  
+De la même façon que pour le corps avec ```font-size``` l'interlignage peut être défini dans plusieurs unités de mesure. 
+  ```css
+  p {
+    line-height: 20px;
+  }
+---
 
-8. Espacement des mots
-word-spacing: L’espacement entre les mots (interdits)
+9. **Définir l'interlettrage** avec ```letter-spacing```  
+À DÉFINIR
+  ```css
+  p {
+    letter-spacing: À DÉFINIR
+  }
+---
 
-9. Indentation du texte
-text-indent: Définit l'indentation de la première ligne d'un paragraphe.
+10. **Définir l'intermots** avec ```word-spacing```  
+À DÉFINIR
+  ```css
+  p {
+    word-spacing: À DÉFINIR
+  }
+---
+
+11. **Définir l'intendation de la première ligne d'un paragraphe** avec ```text-indent```  
+À DÉFINIR
+  ```css
+  p {
+    text-indent: À DÉFINIR
+  }
+---
+
+Faire un rappel des pseudos-elements :hover
