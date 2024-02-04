@@ -1,119 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Workshop Web2print</title>
-    <link rel="stylesheet" href="assets/css/main.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Viewer</title>
+    <!-- Inclure showdown.js via CDN -->
     <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
-    <link rel="shortcut icon" href="images/Icon.png"/>
+<style type="text/css">
+
+h1 {
+    color:red;
+    font-size:20px;
+}
+p {
+  color:pink;
+}
+</style>
+
 </head>
 <body>
-
-
-    <section>
-
-        <!-- Colonne 1 -->
-        <div class="left-column">
-            <h2 id="Part-01-rule">Le workshop</h2>
-            <h2 id="Part-02-rule">Le web to print <br>(en théorie)</h2>
-            <h2 id="Part-03-rule">Initiation aux langages de programmation</h2>
-            <h2 id="Part-04-rule">Le web to print <br>(en pratique)</h2>
-        </div>
-
-        <!-- Colonne 2 -->
-        <div class="middle-column">
-            <div id="Part-01" class="part">
-                <h2>Sujet</h2>
-                <h2>Programme</h2>
-            </div>
-
-            <div id="Part-02" class="part">
-                <h2>Principe</h2>
-                <h2>Les outils</h2>
-            </div>
-            
-            <div id="Part-03" class="part">
-                <h2>HTML</h2>
-                <h2>CSS</h2>
-                <h2>Autres documentations externes</h2>
-            </div>
-
-            <div id="Part-04" class="part">
-                <h2>Notice d’introduction (pré-requis)</h2>
-                <h2>Typographie</h2>
-                <h2>Grille et composition</h2>
-                <h2>Images et vidéos</h2>
-            </div>
-        </div>
-
-        <!-- Colonne 3 -->
-        <div class="right-column">
-            <div id="sujet" class="part-content">Texte du sujet</div>
-            <div id="programme" class="part-content">Texte du programme</div>
-            <div id="principe" class="part-content">Texte du principe</div>
-            <div id="les-outils" class="part-content">Texte des outils</div>
-            <div id="html" class="part-content">Texte du HTML</div>
-            <div id="css" class="part-content">Texte du CSS</div>
-            <div id="autres-documentations-externes" class="part-content">Texte des autres documentations externes</div>
-            <div id="notice-d’introduction-(pré-requis)" class="part-content">Texte de la notice d’introduction (pré-requis)</div>
-            <div id="typographie" class="part-content">Texte de la typographie</div>
-            <div id="grille-et-composition" class="part-content">Texte grille et composition</div>
-            <div id="images-et-vidéos"class="part-content">Texte images et vidéos</div>
-        </div>
-
-    </section>
+    <h1>Hello</h1>
+    <div id="markdown-content-1"></div>
+    <div id="markdown-content-2"></div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var leftColumnHeadings = document.querySelectorAll('.left-column h2');
-            var middleColumnHeadings = document.querySelectorAll('.middle-column h2');
-
-            leftColumnHeadings.forEach(function(leftHeading, index) {
-                leftHeading.addEventListener('click', function() {
-                    var allParts = document.querySelectorAll('.part');
-                    allParts.forEach(function(part) {
-                        part.style.display = 'none';
-                    });
-                    var selectedPart = document.getElementById(`Part-0${index + 1}`);
-                    if (selectedPart) {
-                        selectedPart.style.display = 'block';
-                    }
-                });
-            });
-
-            middleColumnHeadings.forEach(function(middleHeading) {
-                middleHeading.addEventListener('click', function() {
-                    var allParts = document.querySelectorAll('.part-content');
-                    var id = middleHeading.innerHTML.toLowerCase().replace(/\s/g, '-');
-                    allParts.forEach(function(part) {
-                        part.style.display = 'none';
-                        if (part.id === id) {
-                            part.style.display = 'block';
-                        }
-                    });
-                });
-            });
-        });
-
+        // Fonction pour charger le contenu Markdown dans une div spécifiée
         function loadMarkdownIntoDiv(markdownFileURL, targetDivId) {
             const converter = new showdown.Converter();
 
+            // Récupérer le contenu du fichier Markdown
             fetch(markdownFileURL)
                 .then(response => response.text())
                 .then(markdownText => {
+                    // Utiliser showdown pour convertir le Markdown en HTML
                     const html = converter.makeHtml(markdownText);
 
+                    // Insérer le HTML dans l'élément spécifié
                     document.getElementById(targetDivId).innerHTML = html;
                 });
         }
 
+        // Remplacer les URL par celles des fichiers Markdown que vous souhaitez charger
         const markdownFileURL1 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/list-foundry/README.md';
         const markdownFileURL2 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/list-workshop-w2p/README.md';
 
         // Appeler la fonction pour charger le contenu dans différentes div
-        loadMarkdownIntoDiv(markdownFileURL1, 'sujet');
-        loadMarkdownIntoDiv(markdownFileURL2, 'typographie');
+        loadMarkdownIntoDiv(markdownFileURL1, 'markdown-content-1');
+        loadMarkdownIntoDiv(markdownFileURL2, 'markdown-content-2');
     </script>
-
 </body>
 </html>
