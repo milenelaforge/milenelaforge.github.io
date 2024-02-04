@@ -4,7 +4,7 @@ L’objectif est de créer une publication imprimée en utilisant les technologi
 Comment le graphisme peut permettre de transmettre l'expérience d'une personne à un tiers.
 
 L’accent sera mis sur l’édition collaborative et sur la fluidité des publications web to print (par exemple).   
-L'ensemble de ce que nous coderons sera écrit sur un pad commun:   
+L'ensemble de ce que nous coderons sera écrit sur un pad commun:    
 * Permet aux élèves de visualiser le code en entier et de voir la structure global   
 * Me permet un overview du projet et des corrections beaucoup plus rapides  
  
