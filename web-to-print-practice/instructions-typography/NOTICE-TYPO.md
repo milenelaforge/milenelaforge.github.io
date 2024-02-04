@@ -3,10 +3,10 @@
 # Notice typographie
 
 ## HTML (Structure)
-Les différentes balises pour écrire et organiser du texte
+### Les différentes balises pour écrire et organiser du texte  
+
 1.  **Créer des paragraphes** avec les balises ```<p></p>```  
 ```<p> Écrire du texte entre les balises </p>```
----
 
 2. **Revenir à la ligne** avec ```<br>```  
    Il s’agit d’une balise orpheline, elle n’est à utiliser qu’une fois. 
