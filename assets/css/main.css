@@ -1,0 +1,118 @@
+/*PAGE SETTINGS-----------------------*/
+/*------------------------------------*/
+
+html, * {
+    margin: 0;
+    padding:0;
+    font-family: 'Paragon-Regular';
+    font-weight:normal;
+}
+
+body{
+    /*background-color:lightpink;*/
+    background-color:whitesmoke;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height:5px;
+    background-color: lightgray;
+}
+
+::-webkit-scrollbar-thumb
+{
+    width: 5px;
+    height:5px;
+    background-color: black;
+    border-radius: 0px;
+}
+
+/*TYPEFACES -----------------------*/
+/*------------------------------------*/
+
+@font-face { 
+    font-family: 'Paragon-Regular';
+    src: url('fontes/Paragon-Regular.otf') format('opentype');
+}
+
+h2{
+    color:fuchsia;
+    font-size:20px;
+}
+
+
+
+/*HEADER SETTINGS --------------------*/
+/*------------------------------------*/
+
+/*SECTION SETTINGS -------------------*/
+/*------------------------------------*/
+
+section{
+    display:flex;
+    background-color:orangered;
+}
+
+.left-column {
+    width:15vw;
+    background-color:lightskyblue;
+    /*background-color:whitesmoke;*/
+    padding:20px;
+    height:calc(100vh - 40px);
+    z-index:100;
+  box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+.left-column h2{
+    margin-bottom:25px;
+    background-color:lightyellow;
+    padding:10px;
+    border:1px solid transparent;
+}
+
+.left-column h2:hover{
+    border:1px solid fuchsia;
+    cursor:pointer;
+}
+
+.middle-column{
+    width:15vw;
+    background-color:pink;
+    padding:20px;
+    height:calc(100vh - 40px);
+    z-index:50;
+  box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.3);
+
+}
+
+.middle-column h2{
+    margin-bottom:25px;
+    background-color:lightyellow;
+    padding:10px;
+}
+
+.part{
+        display:none;
+
+}
+
+.right-column{
+    width:60vw;
+    padding:20px;
+    height:calc(100vh - 40px);
+    z-index:50;
+
+}
+
+.part-content{
+        display:none;
+
+}
+
+/*FOOTER SETTINGS --------------------*/
+/*------------------------------------*/
+
+
+
+
