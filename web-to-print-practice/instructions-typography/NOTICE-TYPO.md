@@ -64,7 +64,8 @@ a::after {
 
   p {
     font-family: 'Paragon-Regular', serif;
-  }```
+  }
+  ```
 
 2. **Définir le corps** avec ```font-size```  
 Les tailles de textes peuvent être définies dans plusieurs unités de mesure:
@@ -74,7 +75,8 @@ Les tailles de textes peuvent être définies dans plusieurs unités de mesure:
   ```css
   p {
     font-size:20px;
-  }```
+  }
+  ```
 
 3. **Définir la graisse** avec ```font-weight```  
 L'épaisseur choisie va être définie par le navigateur. Si vous souhaitez un résultat plus controllé, n'oubliez pas que vous pouvez spécifier une police et sa graisse avec ```font-family``` et ```@font-face```
@@ -85,14 +87,16 @@ L'épaisseur choisie va être définie par le navigateur. Si vous souhaitez un r
   ```css
   p {
     font-weight: lighter;
-  }```
+  }
+  ```
 
 4. **Définir le style** avec ```font-style```  
 Il existe plusieurs options : ```normal```, ```italique``` et ```oblique```.
   ```css
   p {
     font-style: italique;
-  }```
+  }
+  ```
 
 5. **Définir la couleur** avec ```color```  
 Il existe plusieurs façon de définir une couleur en css: 
@@ -102,21 +106,24 @@ Il existe plusieurs façon de définir une couleur en css:
   ```css
   p {
     color: red;
-  }```
+  }
+  ```
 
 6. **Aligner le texte** avec ```text-align```  
 Il existe plusieurs options : ```left```, ```right```, ```center``` et ```justify```.
   ```css
   p {
     text-align: left;
-  }```  
+  }
+   ```  
 
 7. **Décorer le texte** avec ```text-decoration```  
 Il existe plusieurs options : ```underline```, ```overline```, ```line-through``` et ```none```. Cette dernière option permet d'annuler une décoration que le navigateur met par défault (par exemple sur les liens ```<a>```)
   ```css
   p {
     text-decoration: underline;
-  }```
+  }
+```
 
 8. **Changer la casse** avec ```text-transform```  
 Il existe plusieurs options :
@@ -126,34 +133,39 @@ Il existe plusieurs options :
   ```css
   p {
     text-transform: uppercase;
-  }```
+  }
+  ```
 
 9. **Définir l'interlignage** avec ```line-height```  
 De la même façon que pour le corps avec ```font-size``` l'interlignage peut être défini dans plusieurs unités de mesure. 
   ```css
   p {
     line-height: 20px;
-  }```
+  }
+```
 
 10. **Définir l'interlettrage** avec ```letter-spacing```  
 À DÉFINIR
   ```css
   p {
     letter-spacing: À DÉFINIR
-  }```
+  }
+```
 
 11. **Définir l'intermots** avec ```word-spacing```  
 À DÉFINIR
   ```css
   p {
     word-spacing: À DÉFINIR
-  }```
+  }
+```
 
 11. **Définir l'intendation de la première ligne d'un paragraphe** avec ```text-indent```  
 À DÉFINIR
   ```css
   p {
     text-indent: À DÉFINIR
-  }```
+  }
+```
 
 Faire un rappel des pseudos-elements :hover
