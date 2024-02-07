@@ -1,3 +1,5 @@
+# Programme  
+
 ## SÉANCE 1 - Mercredi 06 Mars 9h30
 1. Présentation du workshop - Introduction au graphisme libre
 2. Présentation du web to print (références)
