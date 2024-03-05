@@ -6,7 +6,7 @@
 
 ## CSS
 * [MDN web docs - CSS](https://developer.mozilla.org/fr/docs/Web/CSS)
-* [Apprendre le CSS en 20 minutes](https://www.youtube.com/watch?v=1PnVor36_40) (non testé)
+* [Apprendre le CSS en 20 minutes](https://www.youtube.com/watch?v=1PnVor36_40)
 * [CSS CheatSheet](https://htmlcheatsheet.com/css/)
 * [A complete Guide to CSSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 * [MDN web docs - CSS (Utiliser les animations CSS)](https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
