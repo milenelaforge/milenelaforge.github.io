@@ -23,7 +23,8 @@ Elle contient des éléments qui fournissent des informations sur la page et son
 On y retrouve généralement : le titre de la page affiché dans la barre du navigateur, l’encodage des caractères, le lien vers le ou les documents CSS associés à la page,
 le lien vers le ou les documents JS associés à la page, les icônes, …
 
-```<!DOCTYPE html> 
+```html
+<!DOCTYPE html> 
 <html> 
 <head> 
     	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -35,7 +36,8 @@ le lien vers le ou les documents JS associés à la page, les icônes, …
 
 2. Le body 
 La balise body contient tout le contenu visible de la page. C’est dans cette balise que l’on va écrire notre code HTML pour ajouter du contenu 
-```
+
+```html
 <body> 
 	<h1>Titre principal</h1> 
 	<p>Ceci est un paragraphe.</p> 
