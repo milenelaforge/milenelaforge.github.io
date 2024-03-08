@@ -18,6 +18,8 @@
             <h2 id="Part-02-rule">Le web to print <br>(en théorie)</h2>
             <h2 id="Part-03-rule">Initiation aux langages de programmation</h2>
             <h2 id="Part-04-rule">Le web to print <br>(en pratique)</h2>
+
+            <p>Workshop web to print<br> DSAA 1<br> Milène Laforge, 03/2023</p>
         </div>
 
         <!-- Colonne 2 -->
@@ -33,13 +35,14 @@
             </div>
             
             <div id="Part-03" class="part">
-                <h2>HTML</h2>
-                <h2>CSS</h2>
-                <h2>Autres documentations externes</h2>
+                <h2>HTML basiques</h2>
+                <h2>CSS basiques</h2>
+                <h2>Pratiquons!</h2>
+                <h2>Imprimer dans le navigateur</h2>
+                <h2>Paged.js</h2>
             </div>
 
             <div id="Part-04" class="part">
-                <h2>Notice d’introduction (pré-requis)</h2>
                 <h2>Typographie</h2>
                 <h2>Grille et composition</h2>
                 <h2>Images et vidéos</h2>
@@ -50,70 +53,36 @@
         <div class="right-column">
             <div id="sujet" class="part-content">Texte du sujet</div>
             <div id="programme" class="part-content">Texte du programme</div>
-            <div id="principe" class="part-content">Texte du principe</div>
-            <div id="les-outils" class="part-content">Texte des outils</div>
-            <div id="html" class="part-content">Texte du HTML</div>
-            <div id="css" class="part-content">Texte du CSS</div>
-            <div id="autres-documentations-externes" class="part-content">Texte des autres documentations externes</div>
-            <div id="notice-d’introduction-(pré-requis)" class="part-content">Texte de la notice d’introduction (pré-requis)</div>
-            <div id="typographie" class="part-content">Texte de la typographie</div>
+
+            <div id="principe" class="part-content">
+                <div id="graphisme-libre-floss">Graphisme libre et f/loss</div>
+                <div id="publication-fluide">Publication fluide</div>
+            </div>
+            <div id="les-outils" class="part-content">
+                <div id="liste-outils">Liste d'outils</div>
+                <div id="projets-web-to-print">Projets en web 2 print</div>
+                <div id="workshops-web-to-print">Liste des workshops web 2 print</div>
+                <div id="trouver-des-reponses">Où trouver des réponses</div>
+            </div>
+
+            <div id="html-basiques" class="part-content">Texte du HTML</div>
+            <div id="css-basiques" class="part-content">Texte du CSS</div>
+            <div id="pratiquons!" class="part-content">texte pour pratiquer</div>
+            <div id="imprimer-dans-le-navigateur" class="part-content">hey</div>
+            <div id="paged.js" class="part-content">oh</div>
+
+            <div id="typographie" class="part-content">
+                <div id="type-notice">Notice typo</div>
+                <div id="type-foundry">Liste de fonderies libres</div>
+            </div>
             <div id="grille-et-composition" class="part-content">Texte grille et composition</div>
             <div id="images-et-vidéos"class="part-content">Texte images et vidéos</div>
         </div>
 
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var leftColumnHeadings = document.querySelectorAll('.left-column h2');
-            var middleColumnHeadings = document.querySelectorAll('.middle-column h2');
+<script type="text/javascript" src="assets/js/script.js"></script>
 
-            leftColumnHeadings.forEach(function(leftHeading, index) {
-                leftHeading.addEventListener('click', function() {
-                    var allParts = document.querySelectorAll('.part');
-                    allParts.forEach(function(part) {
-                        part.style.display = 'none';
-                    });
-                    var selectedPart = document.getElementById(`Part-0${index + 1}`);
-                    if (selectedPart) {
-                        selectedPart.style.display = 'block';
-                    }
-                });
-            });
-
-            middleColumnHeadings.forEach(function(middleHeading) {
-                middleHeading.addEventListener('click', function() {
-                    var allParts = document.querySelectorAll('.part-content');
-                    var id = middleHeading.innerHTML.toLowerCase().replace(/\s/g, '-');
-                    allParts.forEach(function(part) {
-                        part.style.display = 'none';
-                        if (part.id === id) {
-                            part.style.display = 'block';
-                        }
-                    });
-                });
-            });
-        });
-
-        function loadMarkdownIntoDiv(markdownFileURL, targetDivId) {
-            const converter = new showdown.Converter();
-
-            fetch(markdownFileURL)
-                .then(response => response.text())
-                .then(markdownText => {
-                    const html = converter.makeHtml(markdownText);
-
-                    document.getElementById(targetDivId).innerHTML = html;
-                });
-        }
-
-        const markdownFileURL1 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/workshop/README.md';
-        const markdownFileURL2 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/web-to-print-practice/instructions-typography/NOTICE-TYPO.md';
-
-        // Appeler la fonction pour charger le contenu dans différentes div
-        loadMarkdownIntoDiv(markdownFileURL1, 'sujet');
-        loadMarkdownIntoDiv(markdownFileURL2, 'typographie');
-    </script>
 
 </body>
 </html>
