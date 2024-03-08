@@ -19,6 +19,6 @@ Il devient alors possible de travailler plusieurs formats sur base de la même s
 ## Potentiels des outils de mise en page HTML et CSS
 Les langages HTML, CSS et Javascript sont sous license libre, ce qui permet non seulement de les utiliser pour faire de la mise en page, mais également de créer des outils de mise en page à partir de ces langages, et de les diffuser.
 
-Travailler avec ces outils permet également d’établir une chaîne de travail basée sur une source principale, dans un écosystème libre, standard et durable :
+Travailler avec ces outils permet également d’établir une chaîne de travail basée sur une source principale, dans un écosystème libre, standard et durable :  
 <img src="../../assets/Images/hybrid-HTML-schema_©Loraine-Furter.png"/>
 
