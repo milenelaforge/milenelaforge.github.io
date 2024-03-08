@@ -21,23 +21,29 @@ Each program allows to reconsider the action of drawing by adding constraints or
 [LEN VERS L'OUTIL](https://raphaelbastide.com/epaf/)   
 [CODE SOURCE](https://gitlab.com/raphaelbastide/epaf/)    
 <br>
-<img src="Each-page-a-function/epaf1.png" width="200"/>
-<img src="Each-page-a-function/epaf2.png" width="200"/>
-<img src="Each-page-a-function/epaf4.png" width="200"/>  
-<img src="Each-page-a-function/epaf6.png" width="200"/>
-<img src="Each-page-a-function/epaf7.png" width="200"/>
+<img src="../../assets/Images/epaf-01.png" width="200"/>
+<img src="../../assets/Images/epaf-02.png" width="200"/>
+<img src="../../assets/Images/epaf-04.png" width="200"/>
+<img src="../../assets/Images/epaf-04.png" width="200"/>
 
 ## Composer avec les technologies du web
 PROJET PAR: Julie Blanc  
 [VERSION PRINT À TÉLÉCHARGER](https://php.julie-blanc.fr/introduction.html)  
 [LIEN VERS LA VERSION EN LIGNE](https://php.julie-blanc.fr/introduction.html)  
-IMAGES À AJOUTER  
+<br>
+<img src="../../assets/Images/epaf-01.png"/>
+<img src="../../assets/Images/epaf-02.png"/>
+<img src="../../assets/Images/epaf-04.png"/>
+<img src="../../assets/Images/epaf-04.png"/>
 
 
 ## Critical Atlas of the internet  
 PROJET PAR: Louise Drulhe  
 Pour son diplôme "Atlas critique d'Internet", Louise Drulhe a créé un livre qui possède une infinité de formats. Il s'agit d'un code informatique unique avec un nombre infini de possibilités d'affichage, à la fois en ligne (sites web, etc.) et sur papier. Dans une idée de responsive print, l'édition a un format adaptatif. Basée sur les règles d'impression CSS, la mise en page est générée automatiquement pour chaque nouveau format, et continuellement adaptée et réadaptée du livre au format de l'affiche.  
-IMAGES À AJOUTER  
+<br>
+<img src="../../assets/Images/atlas-critique-interieur-01.jpg" width="200"/>
+<img src="../../assets/Images/atlas-critique-interieur-02.jpg" width="200"/>
+<img src="../../assets/Images/atlas-critique-interieur-03.jpg" width="200"/>
 
 ## Avoid Software  
 PROJET PAR: Sarah Garcin, Emma Sizun et Quentin Juhel  
