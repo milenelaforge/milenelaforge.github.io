@@ -6,6 +6,7 @@ html, * {
     padding:0;
     font-family: 'Paragon-Regular';
     font-weight:normal;
+    color:dodgerblue;
 }
 
 body{
@@ -16,14 +17,14 @@ body{
 ::-webkit-scrollbar {
     width: 5px;
     height:5px;
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 
 ::-webkit-scrollbar-thumb
 {
     width: 5px;
     height:5px;
-    background-color: black;
+    background-color: springgreen;
     border-radius: 0px;
 }
 
@@ -35,13 +36,6 @@ body{
     src: url('fontes/Paragon-Regular.otf') format('opentype');
 }
 
-h2{
-    color:fuchsia;
-    font-size:20px;
-}
-
-
-
 /*HEADER SETTINGS --------------------*/
 /*------------------------------------*/
 
@@ -50,69 +44,133 @@ h2{
 
 section{
     display:flex;
-    background-color:orangered;
 }
 
 .left-column {
     width:15vw;
-    background-color:lightskyblue;
-    /*background-color:whitesmoke;*/
+    background-color:whitesmoke;
     padding:20px;
     height:calc(100vh - 40px);
     z-index:100;
   box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.3);
-
 }
 
 .left-column h2{
     margin-bottom:25px;
-    background-color:lightyellow;
     padding:10px;
-    border:1px solid transparent;
+    border:1px solid sienna;
+    color:sienna;
+    font-size:20px;
 }
 
 .left-column h2:hover{
-    border:1px solid fuchsia;
+    border:1px solid springgreen;
     cursor:pointer;
+    background-color: springgreen;
+    color:dodgerblue;
+}
+
+.left-column p{
+    position:absolute;
+    bottom:20px;
 }
 
 .middle-column{
     width:15vw;
-    background-color:pink;
+    background-color:whitesmoke;
     padding:20px;
     height:calc(100vh - 40px);
     z-index:50;
-  box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.3);
-
+    box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
 .middle-column h2{
     margin-bottom:25px;
-    background-color:lightyellow;
     padding:10px;
+    border:1px solid sienna;
+    color:sienna;
+    font-size:20px;
+}
+
+.middle-column h2:hover{
+    border:1px solid springgreen;
+    cursor:pointer;
+    background-color: springgreen;
+    color:dodgerblue;
+}
+
+.middle-column h2:checked{
+    border:1px solid springgreen;
+    cursor:pointer;
+    background-color: springgreen;
+    color:dodgerblue;
 }
 
 .part{
-        display:none;
-
+    display:none;
 }
 
 .right-column{
-    width:60vw;
-    padding:20px;
+    width:calc(70vw - 160px);
+    padding:20px 40px;
     height:calc(100vh - 40px);
     z-index:50;
-
+    overflow-y: scroll;
 }
 
 .part-content{
-        display:none;
-
+    display:none;
 }
 
-/*FOOTER SETTINGS --------------------*/
+/*RIGHT COLUMN SETTINGS --------------*/
 /*------------------------------------*/
 
+h1{
+    text-align:left;
+    font-size:50px;
+    color:springgreen;
+}
+
+.right-column h2{
+    color:dodgerblue;
+    text-align:left;
+    margin: 5vh 0 2vh 0;
+    text-decoration:underline;
+    text-underline-position: under;
+    font-size:20px;
+}
+
+ul{
+    margin-left:25px;
+}
+
+h4{
+    font-family:sans-serif;
+    margin-top:2vh;
+    color:darkblue;
+}
+
+blockquote {
+    border-left: 4px solid springgreen; 
+    color: sienna; 
+}
 
 
+pre {
+    background-color: #f4f4f4;
+    padding: 1em;
+    border-radius: 5px;
+    overflow-x: auto; /* Pour activer le défilement horizontal si nécessaire */
+}
+
+/* Style pour le texte du code */
+code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+    width:100%;
+}
+
+code:hover {
+    background-color:lightsteelblue;
+}
 
