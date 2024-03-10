@@ -1,4 +1,4 @@
-# Imprimer dans le navigateur / @medias print
+# Imprimer dans le navigateur <br>@medias print
 
 Comme nous l’avons déjà évoqué, le web to print repose sur une fonctionnalité offerte par les navigateurs : la commande Ctrl + p (ou Fichier > Imprimer).  
 On peut donc composer un contenu sur une page HTML, l’afficher dans un navigateur et l’imprimer (ou plutôt, générer un PDF). 
