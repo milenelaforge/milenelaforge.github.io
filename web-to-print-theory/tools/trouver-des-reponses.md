@@ -11,11 +11,14 @@
 * [A complete Guide to CSSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 * [MDN web docs - CSS (Utiliser les animations CSS)](https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 
-## [Paged.js](https://pagedjs.org/documentation/)
+## Paged.js
+* [Site de Paged.js - Page documentation](https://pagedjs.org/documentation/)  
 
-## [Stackoverflow](https://stackoverflow.com/)
+## Stackoverflow
+* [Forum](https://stackoverflow.com/)
 
-## [ChatGPT](https://chat.openai.com/)
+## ChatGPT
+* [Chatbot](https://chat.openai.com/)
 
 ## Internet
 HTML et CSS sont des langages très répandus et énormément de documentation existe en ligne. 
