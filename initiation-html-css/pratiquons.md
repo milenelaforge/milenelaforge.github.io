@@ -1,4 +1,4 @@
-# Pratiquons un peu les bases du code HTML et CSS
+# Pratiquons les bases du code HTML et CSS
 
 ## Template
 Téléchargez le template pour pratiquer individuellement en cliquant ici [Télécharger le fichier](css-basics.md)
