@@ -32,9 +32,9 @@ En 2017, Sarah Garcin et Raphaël Bastide ont mutualiser leurs expérimentations
 fondant PrePostPrint. Les enjeux de PPP sont multiples, aujourd’hui PPP peut être définit comme un groupe de designers, d’artistes ou d’éditrices regroupés par 
 l’envie d’expérimenter et de partager des approches alternatives de la publication, de l’édition et de la production d’objets imprimés. C’est une communauté de pratiques, 
 un espace d’entraide, de partage d’expériences, d’outils et d’usages, profondément ancré dans le mouvement du libre. 
-<br>
+<br><br>
 <img src="../../assets/Images/ppp.png" width="500"/>
-
+<br>
 Sur le site vous pouvez retrouver cette description : 
 PrePostPrint est un label et un site web visant à promouvoir des objets et des ressources graphiques répondant aux caractéristiques suivantes :
 <br>
