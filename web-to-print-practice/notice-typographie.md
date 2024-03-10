@@ -1,34 +1,33 @@
 # Notice typographie
 
 ## HTML (Structure)  
-### Les différentes balises pour écrire et organiser du texte    
 
-#### Créer des paragraphes avec les balises ```<p></p>```  
+### Créer des paragraphes avec les balises ```<p></p>```  
 ```<p> Écrire du texte entre les balises </p>```  
 
-#### Revenir à la ligne avec ```<br>```  
+### Revenir à la ligne avec ```<br>```  
 Il s’agit d’une balise orpheline, elle n’est à utiliser qu’une fois.   
 
-#### Créer des titres avec ```<h1>``` ```<h2>``` ```<h3>``` ```<h4>``` ```<h5>``` et ```<h6>```  
+### Créer des titres avec ```<h1>``` ```<h2>``` ```<h3>``` ```<h4>``` ```<h5>``` et ```<h6>```  
 Pour rappel, le HTML est une langage de balisage qui permet de structurer et hiérarchiser des éléments dans une page web.    
 Il existe en ce sens, plusieurs niveaux de titres qui vont du plus important ```<h1> </h1>``` au moins important ```<h6> </h6>```  
 
 Votre navigateur affiche par défaut des tailles différentes de texte en fonction des titres, mais si vous voulez modifier la taille du texte, il faut le faire en CSS.  
 
-#### Créer des listes avec ```<ol>``` / ```<ul>``` et ```<li>```
+### Créer des listes avec ```<ol>``` / ```<ul>``` et ```<li>```
 * **Structure de la liste**   
 Pour faire une liste à puces, vous utilisez les balises ```<ul> </ul>```  
 Pour faire une liste numérotée, vous utiliser les balises ```<ol> </ol>```
 * **Élément de la liste**  
 Dans les deux cas, vous balisez chaque élément de la liste avec ```<li> </li>```  
 
-#### Mettre en valeur du texte (structurellement dans le HTML)
+### Mettre en valeur du texte (structurellement dans le HTML)
 * Italique ```<em> </em>```
 * Gras ```<strong> </strong>```
 * Surligné ```<mark> </mark>```  
 Rappel, HTML Vous pourrez personnaliser tout ça dans le CSS.  
 
-#### Créer un hyperlien avec ```<a> </a>``` et ```href```  
+### Créer un hyperlien avec ```<a> </a>``` et ```href```  
 Pour faire un lien hypertexte :
 * On utilise la balise ```<a>``` pour indiquer qu'on va rediriger vers un autre endroit,
 * Puis, on ajoute l'attribut ```href=``` pour annoncer l'endroit vers lequel on veut rediriger,
@@ -52,7 +51,7 @@ a::after {
 
 ## CSS (Style / Apparence)
 
-#### Définir une famille de caractère avec ```font-family```
+### Définir une famille de caractère avec ```font-family```
 * Utiliser les réglages par défaut : ```font-family: serif``` ou ```font-family: sans-serif```
 * Importer une fonte spécifique avec ```@font-face```
   ```css
@@ -66,7 +65,7 @@ a::after {
   }
   ```
 
-#### Définir le corps avec ```font-size```  
+### Définir le corps avec ```font-size```  
 Les tailles de textes peuvent être définies dans plusieurs unités de mesure:
 * Valeurs absolues : en ```px```, en ```pt```
 * Valeurs relatives : en ```vh```, en ```vw```, en ```em```.
@@ -77,7 +76,7 @@ Les tailles de textes peuvent être définies dans plusieurs unités de mesure:
   }
   ```
 
-#### Définir la graisse avec ```font-weight```  
+### Définir la graisse avec ```font-weight```  
 L'épaisseur choisie va être définie par le navigateur. Si vous souhaitez un résultat plus controllé, n'oubliez pas que vous pouvez spécifier une police et sa graisse avec ```font-family``` et ```@font-face```
 * ```normal``` correspond à l'épaisseur normale du texte.
 * ```bold``` indique une épaisseur plus importante que la normale.
@@ -89,7 +88,7 @@ L'épaisseur choisie va être définie par le navigateur. Si vous souhaitez un r
   }
   ```
 
-#### Définir le style avec ```font-style```  
+### Définir le style avec ```font-style```  
 Il existe plusieurs options : ```normal```, ```italique``` et ```oblique```.
   ```css
   p {
@@ -97,7 +96,7 @@ Il existe plusieurs options : ```normal```, ```italique``` et ```oblique```.
   }
   ```
 
-#### Définir la couleur avec ```color```  
+### Définir la couleur avec ```color```  
 Il existe plusieurs façon de définir une couleur en css: 
 * Nom prédéfini : ```color: white;```, ```color: black;```,…
 * Valeur hexadécimale : ```color: #FFFFFF;```, ```color: #000000;```,…
@@ -108,7 +107,7 @@ Il existe plusieurs façon de définir une couleur en css:
   }
   ```
 
-#### Aligner le texte avec ```text-align```  
+### Aligner le texte avec ```text-align```  
 Il existe plusieurs options : ```left```, ```right```, ```center``` et ```justify```.
   ```css
   p {
@@ -116,7 +115,7 @@ Il existe plusieurs options : ```left```, ```right```, ```center``` et ```justif
   }
    ```  
 
-#### Décorer le texte avec ```text-decoration```  
+### Décorer le texte avec ```text-decoration```  
 Il existe plusieurs options : ```underline```, ```overline```, ```line-through``` et ```none```. Cette dernière option permet d'annuler une décoration que le navigateur met par défault (par exemple sur les liens ```<a>```)
   ```css
   p {
@@ -124,7 +123,7 @@ Il existe plusieurs options : ```underline```, ```overline```, ```line-through``
   }
 ```
 
-#### Changer la casse avec ```text-transform```  
+### Changer la casse avec ```text-transform```  
 Il existe plusieurs options :
 * ```uppercase```: capitales
 * ```lowercase```: bas de casse
@@ -135,7 +134,7 @@ Il existe plusieurs options :
   }
   ```
 
-#### Définir l'interlignage avec ```line-height```  
+### Définir l'interlignage avec ```line-height```  
 De la même façon que pour le corps avec ```font-size``` l'interlignage peut être défini dans plusieurs unités de mesure. 
   ```css
   p {
@@ -143,7 +142,7 @@ De la même façon que pour le corps avec ```font-size``` l'interlignage peut ê
   }
 ```
 
-#### Définir l'interlettrage avec ```letter-spacing```  
+### Définir l'interlettrage avec ```letter-spacing```  
 À DÉFINIR
   ```css
   p {
@@ -151,7 +150,7 @@ De la même façon que pour le corps avec ```font-size``` l'interlignage peut ê
   }
 ```
 
-#### Définir l'intermots avec ```word-spacing```  
+### Définir l'intermots avec ```word-spacing```  
 À DÉFINIR
   ```css
   p {
@@ -159,7 +158,7 @@ De la même façon que pour le corps avec ```font-size``` l'interlignage peut ê
   }
 ```
 
-#### Définir l'intendation de la première ligne d'un paragraphe avec ```text-indent```  
+### Définir l'intendation de la première ligne d'un paragraphe avec ```text-indent```  
 À DÉFINIR
   ```css
   p {

@@ -4,14 +4,18 @@
 WORKSHOP MENÉ PAR: Sarah Garcin et Raphaël Bastide  
 [LIEN VERS LA VERSION PDF](https://raphaelbastide.com/workshops/a-party-to-print/a-party-to-print_compressed.pdf)  
 [LIEN VERS LA DOCUMENTATION](https://raphaelbastide.com/workshops/a-party-to-print/)  
-IMAGES À AJOUTER 
+<br>
+<img src="../../assets/Images/party-to-print-01.jpg" width="200"/>
+<img src="../../assets/Images/party-to-print-02.jpg" width="200"/>
 
  ## Code X 
 PROJET PAR: Julie Blanc et Quentin Juhel  
 DESCRIPTION: Le premier numéro du journal "Code X" a été publié à l'occasion de l'événement PrePostPrint des 20 et 21 octobre 2017 à la Gaîté Lyrique (Paris). Il a été entièrement conçu en HTML et CSS à partir d'un navigateur web. Les propriétés CSS region, CSS grid et CSS multicolumn ont été utilisées. Les fichiers sources du journal sont disponibles sur gitlab.  
 [ÉDITION](https://www.editions-hyx.com/fr/code-x)  
 [CODE SOURCE](https://gitlab.com/prepostprint/code-x-01)  
-IMAGES À AJOUTER  
+<br>
+<img src="../../assets/Images/code-x-01.jpg" width="200"/>
+<img src="../../assets/Images/code-x-02.jpg" width="200"/>
 
 ## Each Page A Function 
 PROJET PAR: Raphaël Bastide  
@@ -31,11 +35,8 @@ PROJET PAR: Julie Blanc
 [VERSION PRINT À TÉLÉCHARGER](https://php.julie-blanc.fr/introduction.html)  
 [LIEN VERS LA VERSION EN LIGNE](https://php.julie-blanc.fr/introduction.html)  
 <br>
-<img src="../../assets/Images/epaf-01.png"/>
-<img src="../../assets/Images/epaf-02.png"/>
-<img src="../../assets/Images/epaf-04.png"/>
-<img src="../../assets/Images/epaf-04.png"/>
-
+<img src="../../assets/Images/these-julie-blanc-01.png" width="200"/>
+<img src="../../assets/Images/these-julie-blanc-02.png" width="200"/>
 
 ## Critical Atlas of the internet  
 PROJET PAR: Louise Drulhe  
@@ -49,7 +50,9 @@ Pour son diplôme "Atlas critique d'Internet", Louise Drulhe a créé un livre q
 PROJET PAR: Sarah Garcin, Emma Sizun et Quentin Juhel  
 DESCRIPTION: Avoid Software est un fanzine geekos-punkos-utilos proposant des méthodes, scripts, hacks libres et open-source utiles à tout artiste, designer ou étudiant·e en école d’art et de design. Comment se passer des logiciels et utiliser des scripts pour toute action numérique ? Convertir des formats de fichiers, compresser un pdf, modifier des images, renommer des fichiers… Il présente également des programmes plus complexes et expérimentaux imaginés par des designers graphiques geekos et libristes. Il se décline en une version en ligne et en une version imprimée.  
 [VERSION EN LIGNE](https://avoidsoftware.sarahgarcin.com/)  
-IMAGES À AJOUTER  
+<br>
+<img src="../../assets/Images/avoid-software-01.jpg" width="200"/>
+<img src="../../assets/Images/avoid-software-02.png" width="200"/> 
 
 
 ## Les sculptures de la villa Chiragan  
@@ -58,16 +61,25 @@ DESCRIPTION: Catalogue multi-support pour le musée Saint-Raymond (Toulouse). Le
 [DOCUMENTATION](https://julie-blanc.fr/projects/villa-chiragan/)  
 [VERSION EN LIGNE](https://villachiragan.saintraymond.toulouse.fr/)  
 [CODE SOURCE](https://gitlab.com/musee-saint-raymond/villa-chiragan)  
-IMAGES À AJOUTER  
+<br>
+<img src="../../assets/Images/book-chiragan-01.jpg" width="200"/>
+<img src="../../assets/Images/book-chiragan-02.jpg" width="200"/>
+<img src="../../assets/Images/book-chiragan-03.jpg" width="200"/>
+<img src="../../assets/Images/book-chiragan-04.jpg" width="200"/>
 
 ## Cityfab2.docs  
 PROJET PAR: Amélie Dumont  
 DESCRIPTION: Catalogue multi-support pour le musée Saint-Raymond (Toulouse). Les deux versions, imprimée et numérique, utilisent les technologies du web. Utilisation du principe du single source publishing pour la chaîne éditoriale.  
 [LIEN VERS LE SITE DE AMÉLIE](https://www.amelie.tools/)  
-IMAGES À AJOUTER  
+<br>
+<img src="../../assets/Images/city-01.png" width="200"/>
+<img src="../../assets/Images/city-02.png" width="200"/>
+<img src="../../assets/Images/city-03.png" width="200"/>
 
 ## Graphisme en France 2022  
 MIS EN PAGE PAR: F451  
 DESCRIPTION: Dans l’ouvrage, les 3 textes explorent la question des outils du designer graphique donc F451 a décidé d’uitliser des outils de mise en page différents pour chacune des parties (dont Paged.js et Libre Office).  
 [INTERVIEW](https://www.youtube.com/watch?v=MtT-GbxU4r4)  
-IMAGES À AJOUTER  
+<br>
+<img src="../../assets/Images/Graphisme-en-france-01.png" width="200"/>
+<img src="../../assets/Images/Graphisme-en-france-02.png" width="200"/>
