@@ -43,8 +43,8 @@ a::after {
   content: " (" attr(href) ")";
 } 
 
-> Enfin, on peut rédiriger vers un endroit de notre page web en ciblant un ```id``` et en utilisant ```#```
-> * Exemple : ```<a href="#"> About / contact </a>```  
+Enfin, on peut rédiriger vers un endroit de notre page web en ciblant un ```id``` et en utilisant ```#```
+* Exemple : ```<a href="#"> About / contact </a>```  
 
 + Ajouter comment faire des colonnes ?
 + Faire un récap 
