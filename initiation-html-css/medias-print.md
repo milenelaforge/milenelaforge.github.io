@@ -107,7 +107,7 @@ HTML
 </head>
 ```
 
-CSS 
+CSS  
 Nommé style-screen.css
 ```css
 @media screen {
