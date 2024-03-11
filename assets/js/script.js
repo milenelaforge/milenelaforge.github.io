@@ -41,10 +41,6 @@
                 });
         }
 
-        /*const markdownFileURL1 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/workshop/sujet-ww2p-ensaama.md';
-        const markdownFileURL2 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/workshop/programme-ww2p-ensaama.md';
-        const markdownFileURL3 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/web-to-print-practice/notice-typographie.md';
-        const markdownFileURL4 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/web-to-print-practice/fonderies-libres.md';*/
 
         const markdownFileURL1 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/workshop/sujet-ww2p-ensaama.md';
         const markdownFileURL2 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/workshop/programme-ww2p-ensaama.md';
@@ -59,10 +55,11 @@
         const markdownFileURL11 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/initiation-html-css/pratiquons.md';
         const markdownFileURL12 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/initiation-html-css/medias-print.md';
         const markdownFileURL13 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/initiation-html-css/paged-js.md';
-        const markdownFileURL14 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/web-to-print-practice/notice-typographie.md';
-        const markdownFileURL15 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/web-to-print-practice/fonderies-libres.md';
-        const markdownFileURL16 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/web-to-print-practice/notice-grille-compo.md';
-        const markdownFileURL17 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/web-to-print-practice/notice-images-videos.md';
+        const markdownFileURL14 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/initiation-html-css/paged-js-use.md';
+        const markdownFileURL15 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/web-to-print-practice/notice-typographie.md';
+        const markdownFileURL16 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/web-to-print-practice/fonderies-libres.md';
+        const markdownFileURL17 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/web-to-print-practice/notice-grille-compo.md';
+        const markdownFileURL18 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/web-to-print-practice/notice-images-videos.md';
 
         // Appeler la fonction pour charger le contenu dans différentes div
         loadMarkdownIntoDiv(markdownFileURL1, 'sujet');
@@ -77,11 +74,12 @@
         loadMarkdownIntoDiv(markdownFileURL10, 'css-basiques');
         loadMarkdownIntoDiv(markdownFileURL11, 'pratiquons!');
         loadMarkdownIntoDiv(markdownFileURL12, 'imprimer-dans-le-navigateur');
-        loadMarkdownIntoDiv(markdownFileURL13, 'paged.js');
-        loadMarkdownIntoDiv(markdownFileURL14, 'type-notice');
-        loadMarkdownIntoDiv(markdownFileURL15, 'type-foundry');
-        loadMarkdownIntoDiv(markdownFileURL16, 'grille-et-composition');
-        loadMarkdownIntoDiv(markdownFileURL17, 'images-et-vidéos');
+        loadMarkdownIntoDiv(markdownFileURL13, 'paged-js-def');
+        loadMarkdownIntoDiv(markdownFileURL14, 'paged-js-use');
+        loadMarkdownIntoDiv(markdownFileURL15, 'type-notice');
+        loadMarkdownIntoDiv(markdownFileURL16, 'type-foundry');
+        loadMarkdownIntoDiv(markdownFileURL17, 'grille-et-composition');
+        loadMarkdownIntoDiv(markdownFileURL18, 'images-et-vidéos');
 
 
 
