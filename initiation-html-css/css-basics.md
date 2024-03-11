@@ -35,6 +35,29 @@ Pour cibler des éléments HTML, vous pouvez utiliser différents moyens en CSS 
     * La pseudo-classe nth-child permet de cibler un élément en fonction de sa position parmi ses frères et sœurs.
     * Par exemple, ```ul li:nth-child(1)``` cible le premier élément ```<li>``` à l'intérieur de toutes les listes ```<ul>```.
 
+## Ajouter de l'intéractivité sans javascript
+Le langage CSS est un langage assez puissant qui peut permettre dans certains cas de remplacer Javascript.  
+Utilisation des pseudos-class:  
+* :hover : La pseudo-class ```:hover``` permet de cibler un élément lorsque le curseur de la souris le survole.
+* :active : La pseudo-class ```:active``` cible un élément au moment où il est activé, généralement lorsqu'un clic de souris est en cours.
+
+Animations css: 
+* @keyframes : Les animations CSS sont définies à l'aide de ```@keyframes``` règle. Cela permet de spécifier les étapes d'une animation.
+* ```css
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  ```
+
+
 ## Commentaires
 Comme en HTML, vous pouvez commenter des parties de votre code en CSS. Dans ce cas, vous devez encadré le contenu à commenter des balises  ```/*``` et ```*/```.
 
