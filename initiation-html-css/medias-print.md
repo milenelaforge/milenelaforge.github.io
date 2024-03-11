@@ -34,7 +34,6 @@ La règle @media en CSS permet de définir des styles spécifiques pour différe
 Il existe trois façons de spécifier les deux médias pour le HTML 
 
 1. Directement dans la structure HTML, dans le head
-Fichier à télécharger ici
 ```html
 <!DOCTYPE html>
 <html lang="fr">
@@ -62,8 +61,7 @@ Fichier à télécharger ici
 ```
 Cette solution est pratique pour de petites expérimentations mais il est préférable d’externaliser le CSS pour des raisons de lecture et optimisation du code. 
 
-2. Dans un fichier css externe 
-Dossier à télécharger ici
+2. Dans un fichier css externe  
 
 HTML 
 ```html
@@ -93,7 +91,7 @@ CSS (nommé styles.css)
 	}
 }
 ```
-3. Dans deux fichiers css externes
+3. Dans deux fichiers css externes  
 Dossier à télécharger ici 
 
 HTML 
