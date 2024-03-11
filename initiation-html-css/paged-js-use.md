@@ -22,7 +22,8 @@ Le head ressemble à ça :
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Titre de ma page</title>
-	<link rel="stylesheet" type="text/css" href="https://mensuel.framapad.org/p/main-css/export/txt">
+	<link rel="stylesheet" type="text/css"
+	      href="https://mensuel.framapad.org/p/main-css/export/txt">
 	<link href="css/interface.css" rel="stylesheet" type="text/css" />
 	<script src="js/paged.polyfill.js"></script>
     	<script src="js/reload-in-place.js"></script>
