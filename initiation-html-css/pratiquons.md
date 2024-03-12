@@ -1,7 +1,7 @@
 # Pratiquons les bases du code HTML et CSS
 
 ## Template
-Téléchargez le template pour pratiquer individuellement en cliquant <a href="../../assets/Document/Initiation-html-css.zip" download="">ici</a>
+Téléchargez le template pour pratiquer individuellement en cliquant <a href="../../assets/Documents/Initiation-html-css.zip" download="">ici</a>
 
 ## Ouverture
 Une fois téléchargé, vous devez l'ouvrir de deux façons 
