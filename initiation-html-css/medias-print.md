@@ -92,7 +92,7 @@ CSS (nommé styles.css)
 }
 ```
 ### 3. Dans deux fichiers css externes  
-### Dossier à télécharger <a href="../assets/Document/medias-screen-print" download="">ici</a>
+### Dossier à télécharger <a href="../assets/Document/medias-screen-print.zip" download="">ici</a>
 
 HTML 
 ```html
