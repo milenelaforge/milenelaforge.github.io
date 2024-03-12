@@ -19,6 +19,33 @@
 <h3>titre niveau 3</h3>
 <h4>titre niveau 4</h4>
 <h5>titre niveau 5</h5>
+
+	    <div id="contenuExterne"></div>
+
 </body>
 
+	    <script>
+        // Fonction pour charger le contenu HTML externe
+        function chargerContenuExterne(url) {
+            // Créer une requête HTTP
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        // Injecter le contenu dans la div
+                        document.getElementById("contenuExterne").innerHTML = xhr.responseText;
+                    } else {
+                        console.error("Erreur lors du chargement du contenu externe: " + xhr.status);
+                    }
+                }
+            };
+            // Ouvrir la requête HTTP
+            xhr.open("GET", url, true);
+            // Envoyer la requête
+            xhr.send();
+        }
+
+        // Appeler la fonction pour charger le contenu externe
+        chargerContenuExterne("https://semestriel.framapad.org/p/workshop-w2p-html-a6kf/export/txt");
+    </script>
 </html>
