@@ -2,7 +2,7 @@
 
 ## Template
 Téléchargez le template pour pratiquer individuellement en cliquant ici
-<a href="../assets/Document/Initiation-html-css.zip" download="">Download it</a>
+<a href="../../assets/Document/Initiation-html-css.zip" download="">Download it</a>
 
 ## Ouverture
 Une fois téléchargé, vous devez l'ouvrir de deux façons 
