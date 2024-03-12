@@ -9,13 +9,5 @@ En suivant ce <a href="https://semestriel.framapad.org/p/workshop-w2p-html-a6kf?
 <br>
 <br>
 <br>
-<iframe name="embed_readwrite" src="https://semestriel.framapad.org/p/workshop-w2p-html-a6kf?showControls=true&showChat=true&showLineNumbers=true&useMonospaceFont=false" width="100%" height="600" frameborder="0"></iframe>
-<br>
-<br>
-<br>
 # Accéder au pad CSS  
 En suivant ce <a href="https://semestriel.framapad.org/p/workshop-w2p-css-a6jt?lang=fr" target="blank">lien</a>, vous pouvez accéder au pad CSS destiné à la mise en page. 
-<br>
-<br>
-<br>
-<iframe name="embed_readwrite" src="https://semestriel.framapad.org/p/workshop-w2p-css-a6jt?showControls=true&showChat=true&showLineNumbers=true&useMonospaceFont=false" width="100%" height="600" frameborder="0"></iframe>
