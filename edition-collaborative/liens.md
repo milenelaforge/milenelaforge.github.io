@@ -11,3 +11,6 @@ En suivant ce <a href="https://semestriel.framapad.org/p/workshop-w2p-html-a6kf?
 <br>
 # Accéder au pad CSS  
 En suivant ce <a href="https://semestriel.framapad.org/p/workshop-w2p-css-a6jt?lang=fr" target="blank">lien</a>, vous pouvez accéder au pad CSS destiné à la mise en page. 
+
+# Accéder au pad général du workshop
+<a href="https://mensuel.framapad.org/p/infos-a6l3" target="blank">Cliquer ici</a>
