@@ -17,5 +17,8 @@ Nous utiliserons Google Chrome. Ce n’est pas un navigateur libre, mais c’est
 Un outil collaboratif en ligne qui permet à plusieurs utilisateurs de travailler simultanément sur un même document texte. Contrairement aux logiciels de traitement de texte traditionnels, les pads offrent une fonctionnalité en temps réel qui permet à tous les participants de voir les modifications apportées au document en temps réel.
 Nous utiliserons [Framapad](https://framapad.org/abc/fr/) qui repose sur l’application libre Etherpad. 
 
+## Sublime Text
+Sublime Text est un éditeur de texte utilisé par les développeurs pour écrire du code. Il vous permet de coder dans tous les langages que vous souhaitez (html, css, js, php, …). Vous pouvez le télécharger [ici](https://www.sublimetext.com/index2). 
+
 
 
