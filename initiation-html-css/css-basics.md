@@ -43,7 +43,7 @@ Utilisation des pseudos-class:
 
 Animations css: 
 * @keyframes : Les animations CSS sont définies à l'aide de ```@keyframes``` règle. Cela permet de spécifier les étapes d'une animation.
-* ```css
+*```css
   @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -63,7 +63,7 @@ Comme en HTML, vous pouvez commenter des parties de votre code en CSS. Dans ce c
 ## Lier un fichier CSS à un document HTML
 Pour lier un fichier CSS à un document HTML, vous pouvez utiliser l'élément ```<link>``` dans la section ```<head>``` de votre document HTML.
 
-```
+```html
 <!DOCTYPE html> 
 <html> 
 <head> 
