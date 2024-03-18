@@ -43,19 +43,20 @@ Utilisation des pseudos-class:
 
 Animations css: 
 * @keyframes : Les animations CSS sont définies à l'aide de ```@keyframes``` règle. Cela permet de spécifier les étapes d'une animation.
-*```css
-  @keyframes fadeIn {
+```css
+@keyframes fadeIn {
     0% {
         opacity: 0;
     }
     100% {
         opacity: 1;
     }
-  }
-  .fade-in {
+}
+
+.fade-in {
     animation: fadeIn 1s ease-in-out;
-  }
-  ```
+}
+```
 
 ## Commentaires
 Comme en HTML, vous pouvez commenter des parties de votre code en CSS. Dans ce cas, vous devez encadré le contenu à commenter des balises  ```/*``` et ```*/```.
