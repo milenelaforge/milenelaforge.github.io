@@ -116,3 +116,94 @@ Et on peut les combiner
    	 marks: crop cross;
 }
 ```
+
+## Créer du contenu généré 
+
+### The content property
+La propriété « content » s’utilise avec les pseudos-elements ```::before``` et ```::after```
+```css
+.note::before {
+  content: "Note: ";
+}
+```
+Permet par exemple d’ajouter la chaine de caractère "Note" systématiquement avant chaque .note.  
+On peut ajouter d’autres paramètres CSS: 
+```css
+.note::before {
+  content: "Note: ";
+  color: red;
+  font-weight: bold;
+}
+```
+
+### Generated counters 
+```css-counter``` est une propriété CSS qui vous permet de compter les éléments de votre contenu.  
+Par exemple, vous pourriez vouloir ajouter un nombre avant chaque légende de figure.  
+Pour ce faire, vous devez réinitialiser le compteur dans le sélecteur ```<body>```
+```css
+body {
+  counter-reset: figureNumber;
+}
+```
+L’incrémenter chaque fois qu'une légende apparaît dans le contenu 
+```css
+figcaption {
+  counter-increment: figureNumber;
+}
+```
+### Generated links
+Pour afficher les liens quand on imprime, on peut ajouter cette commande
+```css
+a::after {
+  content: " (" attr(href) ")";
+}
+```
+
+## Le principe des margin boxes (très important!)
+
+### Margin boxes of a page
+Une page box se compose de deux types de zones: 
+1. La page area
+2. Les margin boxes
+
+1. La page area est la zone de contenu d'une page. C'est l'espace dans lequel tout le contenu HTML sera inséré. Lorsque ce contenu n'a plus de place, une autre page est automatiquement créée.
+
+2. Les marges d'une page sont divisées en seize cases dans lesquelles on peut placer du contenu généré (numéro de page, têtes de chapitre). Ces boîtes sont appelées Margin boxes. Chacune a ses propres margin, border, padding et ses propres zones de contenu. 
+
+
+### Contenu généré dans les margin boxes
+Pour ajouter du contenu dans une margin-box, on peut se placer dans une page et utiliser ```content```, exemple: 
+```css
+@page:right {
+    margin-left: 10mm;
+    margin-right: 25mm;
+    background-color: pink;
+    @top-left {
+    content: "My title";
+    }
+}
+```
+Ce code permet d’ajouter le contenu "My title" dans la box en haut à gauche de toutes les pages de droite du livre.  
+<br>
+Si on ne veut pas en avoir dans les page:blank (de droite): 
+```css
+@page:blank{
+      @top-left {
+      content: none;
+      }
+}
+```
+### Page Counter - Pagination
+Utiliser css counter dans @page
+@bottom-left {
+    content: counter(page);
+}
+Combiner avec du texte 
+@bottom-left {
+    content: "page " counter(page);
+}
+Indiquer nombre de pages global
+@bottom-left {
+    content: "Page " counter(page) " of " counter(pages);
+}
+Note : pour l’instant, on ne peut pas commencer un livre à partir d’un compteur différent. 
