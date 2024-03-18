@@ -143,27 +143,45 @@ De la même façon que pour le corps avec ```font-size``` l'interlignage peut ê
 ```
 
 ### Définir l'interlettrage avec ```letter-spacing```  
-À DÉFINIR
   ```css
   p {
-    letter-spacing: À DÉFINIR
+    letter-spacing: normal;
+    letter-spacing: 1px;
+    letter-spacing: -1px;
   }
 ```
 
 ### Définir l'intermots avec ```word-spacing```  
-À DÉFINIR
   ```css
   p {
-    word-spacing: À DÉFINIR
+    word-spacing: normal;
+    word-spacing: 1px;
+    word-spacing: -1px;
   }
 ```
 
 ### Définir l'intendation de la première ligne d'un paragraphe avec ```text-indent```  
-À DÉFINIR
   ```css
   p {
-    text-indent: À DÉFINIR
+    text-indent: 0;
+    text-indent: 30%;
+    text-indent: -3em; 
   }
 ```
 
-Faire un rappel des pseudos-elements :hover
+### Gérer césures, veuves et orphelines ```hyphens```, ```orphans``` et ```widows```  
+  ```css
+  p {
+    text-align: justify;
+    orphans: 2;
+    widows: 3!important;
+    hyphens: auto;
+    hyphenate-limit-chars:8 4 3;
+  }
+```
+
+## Rappel : Ajouter de l'intéractivité sans javascript
+Le langage CSS est un langage assez puissant qui peut permettre dans certains cas de remplacer Javascript.  
+Utilisation des pseudos-class:  
+* :hover : La pseudo-class ```:hover``` permet de cibler un élément lorsque le curseur de la souris le survole.
+* :active : La pseudo-class ```:active``` cible un élément au moment où il est activé, généralement lorsqu'un clic de souris est en cours.
