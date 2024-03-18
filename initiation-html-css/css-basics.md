@@ -57,7 +57,6 @@ Animations css:
   }
   ```
 
-
 ## Commentaires
 Comme en HTML, vous pouvez commenter des parties de votre code en CSS. Dans ce cas, vous devez encadré le contenu à commenter des balises  ```/*``` et ```*/```.
 
