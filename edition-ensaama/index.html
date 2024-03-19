@@ -20,32 +20,34 @@
 <h4>titre niveau 4</h4>
 <h5>titre niveau 5</h5>
 
-	    <div id="contenuExterne"></div>
+    <div id="content"></div>
 
 </body>
 
-	    <script>
-        // Fonction pour charger le contenu HTML externe
-        function chargerContenuExterne(url) {
-            // Créer une requête HTTP
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        // Injecter le contenu dans la div
-                        document.getElementById("contenuExterne").innerHTML = xhr.responseText;
-                    } else {
-                        console.error("Erreur lors du chargement du contenu externe: " + xhr.status);
-                    }
-                }
-            };
-            // Ouvrir la requête HTTP
-            xhr.open("GET", url, true);
-            // Envoyer la requête
-            xhr.send();
-        }
 
-        // Appeler la fonction pour charger le contenu externe
-        chargerContenuExterne("https://semestriel.framapad.org/p/workshop-w2p-html-a6kf/export/txt");
+    <script>
+        console.log('Début du chargement du contenu du pad.');
+
+        // Attendez que le DOM soit chargé
+        document.addEventListener('DOMContentLoaded', function() {
+            // Utilisation de fetch pour récupérer le contenu du pad
+            fetch('https://semestriel.framapad.org/p/workshop-w2p-html-a6kf/export/txt')
+                .then(response => {
+                    console.log('Réponse reçue du serveur.');
+                    if (!response.ok) {
+                        throw new Error('Réponse du serveur non valide. Statut : ' + response.status);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    console.log('Contenu du pad récupéré avec succès.');
+                    // Insérer le contenu du pad dans la div avec l'ID "content"
+                    document.getElementById('content').innerHTML = data;
+                    console.log('Contenu du pad inséré dans la page.');
+                })
+                .catch(error => {
+                    console.error('Une erreur est survenue lors du chargement du contenu du pad:', error);
+                });
+        });
     </script>
 </html>
