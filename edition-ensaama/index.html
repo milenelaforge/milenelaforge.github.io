@@ -1,53 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Prototype 01</title>
-	<!--<link rel="stylesheet" type="text/css" href="https://mensuel.framapad.org/p/main-css/export/txt">-->
-<link rel="stylesheet" type="text/css" href="https://semestriel.framapad.org/p/workshop-w2p-css-a6jt/export/txt">
-	<link href="css/interface.css" rel="stylesheet" type="text/css" />
-	<script src="js/paged.polyfill.js"></script>
+    <meta charset="utf8">
+    <script src="assets-md/js/markdown-it.js"></script>
+    <script src="js/script.js" defer></script>
+    <title>Édition web to print</title>
+    <script src="assets-md/js/markdown-it-footnote.js"></script>
+    <script src="assets-md/js/markdown-it-attrs.js"></script>
+    <script src="assets-md/js/markdown-it-container.js"></script>
+    <script src="assets-md/js/markdown-it-span.js"></script>
     <script src="js/reload-in-place.js"></script>
 </head>
 
 <body>
-<h1>ceci est mon titre</h1>
-<h2>titre niveau 2</h2>
-<h3>titre niveau 3</h3>
-<h4>titre niveau 4</h4>
-<h5>titre niveau 5</h5>
-
-    <div id="content"></div>
-
 </body>
 
-
-    <!--<script>
-        console.log('Début du chargement du contenu du pad.');
-
-        // Attendez que le DOM soit chargé
-        document.addEventListener('DOMContentLoaded', function() {
-            // Utilisation de fetch pour récupérer le contenu du pad
-            fetch('https://semestriel.framapad.org/p/workshop-w2p-html-a6kf/export/txt')
-                .then(response => {
-                    console.log('Réponse reçue du serveur.');
-                    if (!response.ok) {
-                        throw new Error('Réponse du serveur non valide. Statut : ' + response.status);
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    console.log('Contenu du pad récupéré avec succès.');
-                    // Insérer le contenu du pad dans la div avec l'ID "content"
-                    document.getElementById('content').innerHTML = data;
-                    console.log('Contenu du pad inséré dans la page.');
-                })
-                .catch(error => {
-                    console.error('Une erreur est survenue lors du chargement du contenu du pad:', error);
-                });
-        });
-    </script>-->
 </html>
