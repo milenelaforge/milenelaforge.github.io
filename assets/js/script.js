@@ -61,12 +61,9 @@
         const markdownFileURL17 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/web-to-print-practice/notice-grille-compo.md';
         const markdownFileURL18 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/web-to-print-practice/notice-images-videos.md';
         const markdownFileURL19 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/edition-collaborative/liens.md';
-        const framapadMarkdownURL = 'https://semestriel.framapad.org/p/workshop-w2p-html-a6kf/export/markdown';
-
 
         // Appeler la fonction pour charger le contenu dans différentes div
-        // loadMarkdownIntoDiv(markdownFileURL1, 'sujet');
-        loadMarkdownIntoDiv(framapadMarkdownURL, 'sujet');
+        loadMarkdownIntoDiv(markdownFileURL1, 'sujet');
         loadMarkdownIntoDiv(markdownFileURL2, 'programme');
         loadMarkdownIntoDiv(markdownFileURL3, 'graphisme-libre-floss');
         loadMarkdownIntoDiv(markdownFileURL4, 'publication-fluide');
