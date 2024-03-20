@@ -165,11 +165,13 @@ a::after {
 ### Margin boxes of a page
 Une page box se compose de deux types de zones: 
 1. La page area
-2. Les margin boxes
+2. Les margin boxes  
 
-1. La page area est la zone de contenu d'une page. C'est l'espace dans lequel tout le contenu HTML sera inséré. Lorsque ce contenu n'a plus de place, une autre page est automatiquement créée.
+<img src="../assets/Images/margin-boxes.png" width="700"/>
 
-2. Les marges d'une page sont divisées en seize cases dans lesquelles on peut placer du contenu généré (numéro de page, têtes de chapitre). Ces boîtes sont appelées Margin boxes. Chacune a ses propres margin, border, padding et ses propres zones de contenu. 
+La page area est la zone de contenu d'une page. C'est l'espace dans lequel tout le contenu HTML sera inséré. Lorsque ce contenu n'a plus de place, une autre page est automatiquement créée.  
+
+Les marges d'une page sont divisées en seize cases dans lesquelles on peut placer du contenu généré (numéro de page, têtes de chapitre). Ces boîtes sont appelées Margin boxes. Chacune a ses propres margin, border, padding et ses propres zones de contenu. 
 
 
 ### Contenu généré dans les margin boxes
@@ -194,17 +196,121 @@ Si on ne veut pas en avoir dans les page:blank (de droite):
       }
 }
 ```
+
+### Styliser les margin boxes
+On peut directement appliquer un style à une margin box
+```css
+@page {
+  @top-left {
+    content: "My title";
+    padding-left: 15mm;
+    color: #ff5733;
+  }
+}
+```
+Les dimensions des margin-boxes sont calculé automatiquement par rapport aux marges de la page mais on peut leur donner des valeurs personnalisées. 
+```css
+@page {
+  @left-top {
+    width: 28mm;
+    height: 10mm;
+  }
+}
+```
+Enfin, vous pouvez effectuer des rotations: 
+```css
+@page {
+  @left-top {
+    width: 28mm;
+    height: 10mm;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    position: relative;
+    top: 28mm;
+  }
+}
+```
+
 ### Page Counter - Pagination
 Utiliser css counter dans @page
+```css
 @bottom-left {
     content: counter(page);
 }
+```
+
 Combiner avec du texte 
+```css
 @bottom-left {
     content: "page " counter(page);
 }
+```
+
 Indiquer nombre de pages global
+```css
 @bottom-left {
     content: "Page " counter(page) " of " counter(pages);
 }
+```
 Note : pour l’instant, on ne peut pas commencer un livre à partir d’un compteur différent. 
+
+### Named String: classical running headers/footers
+1. Contenu des Named String  
+Le moyen le plus rapide de créer des en-têtes/pieds de page continus est d'utiliser ce qui se trouve déjà dans le contenu.  
+Les Named String (chaînes nommées) sont utilisées pour créer des en-têtes et des pieds de page continus : elles copient le texte pour le réutiliser dans les zones de marge.  
+
+Tout d’abord, le text est cloné (copié) dans une chaîne en utilisant le paramètre ```string-set``` + un identifiant personnalisé ici ```title``` (on peut nommer cette variable comme on le souhaite)  
+```css
+h2 {
+  string-set: title content(text);
+}
+```
+Dans cet exemple, à chaque fois qu’un ```<h2>``` apparaît, le contenu de notre variable « title » va être adapté.  
+Ensuite, il faut coller notre chaîne en utilisant la fonction ```string()``` et en rappelant notre variable personnalisée title : 
+```css
+@page {
+  @bottom-center {
+    content: string(title);
+  }
+}
+```
+À chaque fois qu'un nouveau titre de niveau 2 est rencontré, elle change la variable de la page où ce titre apparaît et dans toutes les boîtes de marge des pages suivantes jusqu'à ce qu'il y ait un nouveau titre. D’autre options comme cloné seulement la première lettre, cloné l’élément ::before ou ::after sont en cours d’écriture. 
+
+2. Apparence des Named String 
+```css
+@page {
+  @bottom-center {
+    content: string(title);
+    text-transform:uppercase;
+    font-size:10pt;
+  }
+}
+```
+
+### Running elements: headers/footer with specific (complex) content
+1. Contenu des Running elements
+Certains cas plus complexes demandent d’utiliser une autre méthode.  
+On peut inscrire le texte quelque part dans notre HTML: ```<p class="title">Titre courant unique</p>```  
+L’emplacement dans le HTML définira à partir de quel moment il apparaît, tant qu’il n’est pas remplacé, il apparaît sur toutes les pages.  
+
+Puis ajouter dans le CSS
+```css
+.title {
+  position: running(titleRunning);
+}
+
+@page {
+  @top-center {
+    content: element(titleRunning);
+  }
+}
+```
+
+2. Apparence des Running elements
+```css
+.title {
+  position: running(titleRunning);
+  color:red;
+  text-align:center;
+}
+```
