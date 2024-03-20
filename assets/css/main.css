@@ -24,7 +24,7 @@ body{
 {
     width: 5px;
     height:5px;
-    background-color: springgreen;
+    background-color: yellowgreen;
     border-radius: 0px;
 }
 
@@ -64,9 +64,9 @@ section{
 }
 
 .left-column h2:hover{
-    border:1px solid springgreen;
+    border:1px solid yellowgreen;
     cursor:pointer;
-    background-color: springgreen;
+    background-color: yellowgreen;
     color:dodgerblue;
 }
 
@@ -102,16 +102,16 @@ section{
 }
 
 .middle-column h2:hover{
-    border:1px solid springgreen;
+    border:1px solid yellowgreen;
     cursor:pointer;
-    background-color: springgreen;
+    background-color: yellowgreen;
     color:dodgerblue;
 }
 
 .middle-column h2:checked{
-    border:1px solid springgreen;
+    border:1px solid yellowgreen;
     cursor:pointer;
-    background-color: springgreen;
+    background-color: yellowgreen;
     color:dodgerblue;
 }
 
@@ -137,7 +137,7 @@ section{
 .right-column h1{
     text-align:left;
     font-size:35px;
-    color:springgreen;
+    color:yellowgreen;
     text-transform:uppercase;
     margin: 0vh 0 2vh 0;
 }
@@ -171,7 +171,7 @@ ul, ol{
 }
 
 blockquote {
-    border-left: 4px solid springgreen; 
+    border-left: 4px solid yellowgreen; 
     padding-left:25px;
     color: sienna; 
 }
@@ -193,7 +193,7 @@ code {
 }
 
 code:hover {
-    background-color:springgreen;
+    background-color:yellowgreen;
 }
 
 
