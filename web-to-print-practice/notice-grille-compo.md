@@ -4,24 +4,25 @@
 
 ### Définir le format : Page size property
 On peut utiliser des valeurs customisées (en cm, mm, in)
-```css 
+```css
 @page {
-	size: 140mm 200mm;
+size: 140mm 200mm;
 }
-```  
+```
 On peut aussi  Utiliser des standards
 ```css
 @page {
-	size: A5;
+size: A5;
 }
 ```
 
 ### Définir l’orientation
 ```css
 @page {
-	size: A4 landscape;
+size: A4 landscape;
 }
-``` 
+```  
+ 
 
 ### CSS variables
 On n’utilise pas les variables CSS pour définir la taille de la page mais, Paged.js crée un ensemble 
