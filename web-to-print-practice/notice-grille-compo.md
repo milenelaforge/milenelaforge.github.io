@@ -73,9 +73,9 @@ Indique que votre élément doit commencer sur une nouvelle page qui peut être 
 *  ```break-before: page``` Commence sur n’importe quelle page (la suivante)
 *  ```break-before: right``` Commence sur la prochaine page de droite (une page vierge blank sera automatiquement créée si nécessaire)
 *  ```break-before: left``` Commence sur la prochaine page de gauche (une page vierge blank sera automatiquement créée si nécessaire)
-
+<br>
 Si le document est un livre recto/verso, utiliser les sélecteurs de page ```:recto``` et ```:verso``` de la même manière.
-
+<br>
 2. ```Break-after```  
 Indique qu’après notre élément, le contenu suivant doit commencer sur une nouvelle page qui peut être :
 * ```break-after: page```
@@ -84,7 +84,7 @@ Indique qu’après notre élément, le contenu suivant doit commencer sur une n
 
 ### Pseudo-class selectors for pages
 Il existe des pseudo-class selectors qui permettent de cibler des éléments.  
-On connait ```:left``` et ```:right``` (ainsi que ```:recto``` ou ```:verso```).   
+On connait ```:left``` et ```:right``` (ainsi que ```:recto``` ou ```:verso```).  <br> 
 Mais il existe aussi : 
 * ```:first``` Sélectionne la première page du document ```@page:first```
 * ```:blank``` Sélectionne toutes les blank page du document ```@page:blank```
@@ -170,7 +170,7 @@ Une page box se compose de deux types de zones:
 <img src="../assets/Images/margin-boxes.png" width="700"/>
 
 La page area est la zone de contenu d'une page. C'est l'espace dans lequel tout le contenu HTML sera inséré. Lorsque ce contenu n'a plus de place, une autre page est automatiquement créée.  
-
+<br>
 Les marges d'une page sont divisées en seize cases dans lesquelles on peut placer du contenu généré (numéro de page, têtes de chapitre). Ces boîtes sont appelées Margin boxes. Chacune a ses propres margin, border, padding et ses propres zones de contenu. 
 
 
@@ -255,17 +255,18 @@ Indiquer nombre de pages global
 Note : pour l’instant, on ne peut pas commencer un livre à partir d’un compteur différent. 
 
 ### Named String: classical running headers/footers
+<br>
 1. Contenu des Named String  
 Le moyen le plus rapide de créer des en-têtes/pieds de page continus est d'utiliser ce qui se trouve déjà dans le contenu.  
 Les Named String (chaînes nommées) sont utilisées pour créer des en-têtes et des pieds de page continus : elles copient le texte pour le réutiliser dans les zones de marge.  
-
-Tout d’abord, le text est cloné (copié) dans une chaîne en utilisant le paramètre ```string-set``` + un identifiant personnalisé ici ```title``` (on peut nommer cette variable comme on le souhaite)  
+<br>
+Tout d’abord, le texte est cloné (copié) dans une chaîne en utilisant le paramètre ```string-set``` + un identifiant personnalisé ici ```title``` (on peut nommer cette variable comme on le souhaite)  
 ```css
 h2 {
   string-set: title content(text);
 }
 ```
-Dans cet exemple, à chaque fois qu’un ```<h2>``` apparaît, le contenu de notre variable « title » va être adapté.  
+Dans cet exemple, à chaque fois qu’un ```<h2>``` apparaît, le contenu de notre variable « title » va être adapté.  <br>
 Ensuite, il faut coller notre chaîne en utilisant la fonction ```string()``` et en rappelant notre variable personnalisée title : 
 ```css
 @page {
@@ -275,7 +276,7 @@ Ensuite, il faut coller notre chaîne en utilisant la fonction ```string()``` e
 }
 ```
 À chaque fois qu'un nouveau titre de niveau 2 est rencontré, elle change la variable de la page où ce titre apparaît et dans toutes les boîtes de marge des pages suivantes jusqu'à ce qu'il y ait un nouveau titre. D’autre options comme cloné seulement la première lettre, cloné l’élément ::before ou ::after sont en cours d’écriture. 
-
+<br>
 2. Apparence des Named String 
 ```css
 @page {
@@ -292,7 +293,7 @@ Ensuite, il faut coller notre chaîne en utilisant la fonction ```string()``` e
 Certains cas plus complexes demandent d’utiliser une autre méthode.  
 On peut inscrire le texte quelque part dans notre HTML: ```<p class="title">Titre courant unique</p>```  
 L’emplacement dans le HTML définira à partir de quel moment il apparaît, tant qu’il n’est pas remplacé, il apparaît sur toutes les pages.  
-
+<br>
 Puis ajouter dans le CSS
 ```css
 .title {
