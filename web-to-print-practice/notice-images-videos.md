@@ -159,13 +159,13 @@ img {
    Dans votre HTML, créez une div et placez vos images dedans :
    
    ```html
-   <div class="container> {
-       <figure><img src="assets/images/image-01.jpg"></figure>
-       <figure><img src="assets/images/image-02.jpg"></figure>
-       <figure><img src="assets/images/image-03.jpg"></figure>
-       <figure><img src="assets/images/image-04.jpg"></figure>
-       <figure><img src="assets/images/image-05.jpg"></figure>
-       <figure><img src="assets/images/image-06.jpg"></figure>
+   <div class="container">
+      <figure><img src="assets/images/image-01.jpg"></figure>
+      <figure><img src="assets/images/image-02.jpg"></figure>
+      <figure><img src="assets/images/image-03.jpg"></figure>
+      <figure><img src="assets/images/image-04.jpg"></figure>
+      <figure><img src="assets/images/image-05.jpg"></figure>
+      <figure><img src="assets/images/image-06.jpg"></figure>
    </div>
    ```
 2. **Définir un Conteneur Flex** :
