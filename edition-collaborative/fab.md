@@ -1,7 +1,7 @@
 # Choix de fabrication
 
 ## Chemin de fer 
-<img src="../assets/Images/Chemindefer.png"/>
+<img src="../assets/Images/Chemindefer.png" style="width:500px"/>
 
 ## Fabrication
 ### Formats 
