@@ -3,18 +3,16 @@ var markdownit = window.markdownit({
         langPrefix: 'language-fr',
         // You can use html markup element
         html: true,
-        typographer: true,
-        // Replace english quotation by french quotation
-        quotes: ['Â«\xA0', '\xA0Â»', 'â€¹\xA0', '\xA0â€º'],
     })
-    .use(markdownitContainer)
-    .use(markdownitSpan)
-    .use(markdownItAttrs, {
-        // optional, these are default options
-        leftDelimiter: '{',
-        rightDelimiter: '}',
-        allowedAttributes: [] // empty array = all attributes are allowed
-    });
+    // .use(markdownitContainer)
+    // .use(markdownitSpan)
+    // .use(markdownItAttrs, {
+    //     // optional, these are default options
+    //     leftDelimiter: '{',
+    //     rightDelimiter: '}',
+    //     allowedAttributes: [] // empty array = all attributes are allowed
+    // }
+;
 
 // Import the content pad
 var request = new XMLHttpRequest();
@@ -29,7 +27,6 @@ request.addEventListener("readystatechange", function(event) {
 
         // Call each script one by one
         loadScript("assets-md/js/paged.polyfill.js")
-            .then(script => loadScript("assets-md/js/regex-typo.js"))
 
         //add the paged.js css
         var pagedCss = document.createElement("link");
