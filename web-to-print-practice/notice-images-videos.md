@@ -3,53 +3,95 @@
 ## Intégrer une image 
 Vous pouvez intégrer une image dans le HTML avec la balise ```<img>``` : 
 ```html
-<img src="chemin/vers/votre/image.jpg" alt="Description de l'image">
+<img src="assets/images/image.jpg" alt="Description">
 ```  
 Si vous ajouter du contenu multimédias, vous pouvez encapsuler la balise ```<img>``` dans une balise ```<figure>``` globale: 
 ```html
 <figure>
-    <img src="chemin/vers/votre/image.jpg" alt="Description de votre image">
-    <figcaption>© Légendes et crédits de l'image</figcaption>
+    <img src="assets/images/image.jpg" alt="Description">
+    <figcaption>© Légendes de l'image</figcaption>
 </figure>
 ```
-
-
+Dans le contexte de notre workshop, il faudra bien utiliser la syntaxe avec figure pour les dégradés. 
 
 ## Régler les dimensions 
 
-### Image contenu dans les marges
 Vous pouvez utiliser CSS pour styliser votre image ou ajuster son comportement.   
 Voici un exemple simple pour redimensionner une image:
 ```css
 img {
-    width: 100%; /* Redimensionner l'image pour remplir la largeur du conteneur parent */
-    height: auto; /* Permettre à la hauteur de s'ajuster automatiquement en fonction de la largeur */
-    object-fit: contain; /* Permettre à l'image de s'ajuster dans sa boite */
-    object-fit: cover; /* Permettre à l'image de s'ajuster dans sa boite */
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+    object-fit: cover; 
 }
-```
+```  
 
-Vous pouvez utilisez des classes pré-existantes pour les images: 
+Vous pouvez utilisez des classes pré-existantes sur les images: 
 * .small-width --> l'image fera 1/3 de la largeur de la page
 * .middle-width --> l'image fera 50% de la largeur de la page
 * .full-width --> l'image fera la largeur totale de la page (dans les marges)
 * .full-height --> l'image fera la hauteur totale de la page (dans les marges)
-* .full-width-height --> l'image fera la hauteur et largeur totale de la page (dans les marges)
+* .full-width-height --> l'image fera la hauteur et largeur totale de la page (dans les marges)  
 
 Pour utiliser une de ces class, vous devez mettre dans le HTML : 
 ```html
-<img class="small-width" src="chemin/vers/votre/image.jpg">
+<img class="small-width" src="assets/images/image.jpg">
 ```
 
-### Image au dela des marges 
-Full page 
-Double page 
-Full-full-width
-Full-Full-Height
+Il faut s'assurer que les class sont présentes dans le css: 
+
+```css
+.small-width{
+  position:absolute;
+  width:33%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.middle-width { 
+  width:50%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.full-width { 
+  width:100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.full-height { 
+  height:100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.full-width--height { 
+  height:100%;
+  width:100%;
+  object-fit: cover;
+}
+```
 
 ## Régler la postition 
-Centrer verticalement dans la page 
+Vous pouvez utilisez des classes pré-existantes sur les images: 
+* .verticaly-centered
 
+
+Pour utiliser une de ces class, vous devez mettre dans le HTML : 
+```html
+<img class="verticaly-centered" src="assets/images/image.jpg">
+```
+
+Il faut s'assurer que les class sont présentes dans le css: 
+
+```css
+.verticaly-centered{
+  margin-left:50%;
+  transform:translate(-50%);
+}
+```
 ## Faire des grilles (ou placer les éléments les uns par rapport aux autres 
 1. **Définir un Conteneur Flex** :
 
