@@ -61,6 +61,7 @@
         const markdownFileURL17 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/web-to-print-practice/notice-grille-compo.md';
         const markdownFileURL18 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/web-to-print-practice/notice-images-videos.md';
         const markdownFileURL19 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/edition-collaborative/liens.md';
+        const markdownFileURL20 = 'https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/edition-collaborative/fab.md';
 
         // Appeler la fonction pour charger le contenu dans différentes div
         loadMarkdownIntoDiv(markdownFileURL1, 'sujet');
@@ -82,6 +83,7 @@
         loadMarkdownIntoDiv(markdownFileURL17, 'grille-et-composition');
         loadMarkdownIntoDiv(markdownFileURL18, 'images-et-vidéos');
         loadMarkdownIntoDiv(markdownFileURL19, 'liens');
+        loadMarkdownIntoDiv(markdownFileURL20, 'fabrication');
 
 
 
