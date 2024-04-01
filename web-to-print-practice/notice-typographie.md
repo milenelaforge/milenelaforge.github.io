@@ -185,3 +185,79 @@ Le langage CSS est un langage assez puissant qui peut permettre dans certains ca
 Utilisation des pseudos-class:  
 * :hover : La pseudo-class ```:hover``` permet de cibler un élément lorsque le curseur de la souris le survole.
 * :active : La pseudo-class ```:active``` cible un élément au moment où il est activé, généralement lorsqu'un clic de souris est en cours.
+
+## Faire un sommaire 
+
+### Dans le HTML 
+Vous pouvez créer une div qui contiendra le sommaire
+```html
+<div class="sommaire">
+  <p class="link" href="#chapter-1">- </p>
+  <p class="link" href="#chapter-2">- </p>
+  <p class="link" href="#chapter-3">- </p>
+  <p class="link" href="#chapter-4">- </p>
+  <p class="link" href="#chapter-5">- </p>
+  <p class="link" href="#chapter-6">- </p>
+  <p class="link" href="#chapter-7">- </p>
+  <p class="link" href="#chapter-8">- </p>
+</div>
+```
+Puis au fil de votre HTML, vous pouvez ajouter les id correpsondant : 
+```html
+<h3 class="titre-chapitre" id="chapter-1">Nom du chapitre 1</h3>
+<h3 class="titre-chapitre" id="chapter-2">Nom du chapitre 2</h3>
+<h3 class="titre-chapitre" id="chapter-3">Nom du chapitre 3</h3>
+<h3 class="titre-chapitre" id="chapter-4">Nom du chapitre 4</h3>
+<h3 class="titre-chapitre" id="chapter-5">Nom du chapitre 5</h3>
+<h3 class="titre-chapitre" id="chapter-6">Nom du chapitre 6</h3>
+<h3 class="titre-chapitre" id="chapter-7">Nom du chapitre 7</h3>
+<h3 class="titre-chapitre" id="chapter-8">Nom du chapitre 8</h3>
+```
+Les id vont permettent de cibler la balise et récupérer le texte à l'intérieur, grâce au CSS, on va pouvoir appeler le contenu de notre H3 et même la page sur laquelle il se trouve ! 
+
+### Dans le CSS
+Ce code va permettre de récupérer le conteu textuel de l'id correspondant (il sera placé après dans notre sommaire): 
+```css
+.link::after {
+  content: target-text(attr(href url)) ;
+}
+```
+Ce code va permettre de récupérer le numéro de page sur mequel se trouve le nouveau chapitre (il sera placé avant dans notre sommaire): 
+```css
+.link::before {
+  content: target-counter(attr(href url), page);
+}
+```
+Vous pouvez utiliser unautre type de numérotation avec ```decimal-leading-zero```:
+```css
+.link::before {
+  content: target-counter(attr(href url), page, decimal-leading-zero);
+}
+```
+Ça fonctionne aussi pour les numéros de page.  
+
+Enfin, on peut styliser le sommaire : 
+```css
+.sommaire{
+  background-color:cyan;
+}
+.link{
+  border-bottom:1px solid black;
+  padding-bottom:10px;
+}
+
+.link:nth-child(1){
+  border-top:1px solid black;
+  padding-top:10px;
+}
+
+.link::after {
+  content: target-text(attr(href url)) ;
+}
+
+.link::before {
+  content: target-counter(attr(href url), page, decimal-leading-zero);
+  padding-right:50px;
+  font-weight:bolder;
+}
+```
