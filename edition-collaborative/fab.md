@@ -29,3 +29,18 @@
     * 8 pages bleu —> 4 feuilles(A4)
     * 8 pages vertes —> 4 feuilles(A4)
     * 62 pages blanches —> 31 feuilles (A4) (dont 10 feuilles + courtes)
+
+## Fichiers pour manipuler par groupes
+### Groupe GRILLE / COMPO 
+En suivant ce <a href="../assets/Documents/Paged-js-groupe-compo.zip" download="">lien </a>, téléchargez le dossier pour débuter.  
+
+### Groupe TYPO 
+En suivant ce <a href="../assets/Documents/Paged-js-groupe-typo.zip" download="">lien </a>, téléchargez le dossier pour débuter.  
+
+### Groupe IMAGES 
+Pour débuter, vous pouvez commencer à travailler sur la couverture.  
+En suivant ce <a href="https://milenelaforge.github.io/edition-ensaama/cover.html" target="blank">lien</a>, vous accèderez à la couverture (dans le navigateur).  
+En suivant ce <a href="https://semestriel.framapad.org/p/cover-html-a6xp?lang=fr" target="blank">lien</a>, vous pouvez accéder au pad HTML destiné à la couverture.  
+En suivant ce <a href="https://semestriel.framapad.org/p/cover-css-a6xp?lang=fr" target="blank">lien</a>, vous pouvez accéder au pad CSS destiné à la mise en page de la couverture. 
+
+
