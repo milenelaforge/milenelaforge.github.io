@@ -17,4 +17,18 @@
 <body>
 </body>
 
+<script>
+const paragraphs = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, em, strong, li');
+
+paragraphs.forEach(paragraph => {
+    const text = paragraph.textContent;
+
+    let modifiedText = text;
+
+    modifiedText = modifiedText.replace(/([»!;:])/g, '<span class="espace-fine-avant">$1</span>');
+    modifiedText = modifiedText.replace(/([«])/g, '<span class="espace-fine-apres">$1</span>');
+
+    paragraph.innerHTML = modifiedText;
+});
+</script>
 </html>
