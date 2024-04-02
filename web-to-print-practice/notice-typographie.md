@@ -186,6 +186,45 @@ Utilisation des pseudos-class:
 * :hover : La pseudo-class ```:hover``` permet de cibler un élément lorsque le curseur de la souris le survole.
 * :active : La pseudo-class ```:active``` cible un élément au moment où il est activé, généralement lorsqu'un clic de souris est en cours.
 
+## Orthotypo: ajouter des espaces fines et espaces insécables
+
+Pour ajouter des espaces insécables, vous pouvez utiliser cet élément HTML ```&nbsp;``` entre deux éléments de texte. Ça va créer un espace insécable. 
+Par exemple : ```Salut&nbsp;!```. 
+C'est un peu fastideux mais vous pouvez remplir l'intégralité de votre HTML avec ça. C'est une solution légère (car uniquement en CSS).   
+<br>
+Une alternative consiste à utiliser Javascript.  
+```html
+<script>
+const paragraphs = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, em, strong, li');
+
+paragraphs.forEach(paragraph => {
+    const text = paragraph.textContent;
+
+    let modifiedText = text;
+
+    modifiedText = modifiedText.replace(/([»!;:])/g, '<span class="espace-fine-avant">$1</span>');
+    modifiedText = modifiedText.replace(/([«])/g, '<span class="espace-fine-apres">$1</span>');
+
+    paragraph.innerHTML = modifiedText;
+});
+</script>
+```
+<br>
+Le fonctionnement de ce script est assez simple :  le js va repérer tous les glyphs »!;: et « puis les entourer d'un span avec une class.  
+Ensuite dans le css, ces class sont personnalisées avec pseudos-class :before et :after. Cela permet de cibler précisement l'espace créé, ajouter un espace dans le content et diminuer le corps pour réduire la chasse de l'espace et ainsi créer des espaces fines. Pour qu'ils soient insécables, il faut bien penser à retirer tous les espaces simples dans le code.  
+
+```css
+.espace-fine-avant:before{
+  content: "\00a0\00a0";
+  font-size:3pt;
+}
+
+.espace-fine-apres:after{
+  content: "\00a0\00a0";
+  font-size:3pt;
+}
+```
+
 ## Faire un sommaire 
 
 ### Dans le HTML 
