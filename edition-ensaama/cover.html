@@ -2,11 +2,16 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf8">
-    <script src="assets-md/js/markdown-it.js"></script>
-    <script src="js/script-cover.js" defer></script>
-    <title>Couverture</title>
-    <style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover</title>
+    <link href="css/cover.css" rel="stylesheet" type="text/css" />
+    <link href="css/interface.css" rel="stylesheet" type="text/css" />
+    <script src="js/paged.polyfill.js"></script>
+    <script src="js/reload-in-place.js"></script>
+
+<style>
     @font-face { 
         font-family: 'Hershey-Noailles-Times-Duplex-Bold';
         src: url('assets/fontes/Hershey-Noailles-Times-Duplex-Bold.otf') format('opentype');
@@ -15,29 +20,498 @@
         font-family: 'Hershey-Noailles-Times-Triplex-Light';
         src: url('assets/fontes/Hershey-Noailles-Times-Triplex-Light.otf') format('opentype');
     }
+
     @font-face { 
-        font-family: '_Euripides-SemiBold_web(1)';
-        src: url('assets/fontes/_Euripides-SemiBold_web(1).ttf') format('truetype');
+        font-family: 'Hershey-Noailles-Duplex-Regular';
+        src: url('assets/fontes/Hershey-Noailles-Duplex-Regular.otf') format('opentype');
     }
-    </style>
+
+    @font-face { 
+        font-family: 'Hershey-Noailles-Times-Triplex-Italic-Regular';
+        src: url('assets/fontes/Hershey-Noailles-Times-Triplex-Italic-Regular.otf') format('opentype');
+    }
+
+    @font-face { 
+        font-family: 'Euripides-SemiBold';
+        src: url('assets/fontes/Euripides-SemiBold.ttf') format('truetype');
+    }
+</style>
 </head>
 
 <body>
-</body>
 
-<script>
-const paragraphs = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, em, strong, li');
 
-paragraphs.forEach(paragraph => {
-    const text = paragraph.textContent;
+<div class="container">
 
-    let modifiedText = text;
 
-    modifiedText = modifiedText.replace(/([»!;:])/g, '<span class="espace-fine-avant">$1</span>');
-    modifiedText = modifiedText.replace(/([«])/g, '<span class="espace-fine-apres">$1</span>');
+<div class="columns">
+@media print{
+  @page {
+    size: 16cm 21cm;
+    margin-top: 1cm;
+    margin-bottom: 2cm;
+    bleed: 6mm;
+    marks: crop;
+    @bottom-center {
+      content: string(title);
+      text-transform:uppercase;
+      font-size:12pt;
+      color:black;
+      font-family: 'Hershey-Noailles-Times-Triplex-Light';
+    }
+  }
 
-    paragraph.innerHTML = modifiedText;
-});
-</script>
+  @page:left {
+    margin-left: 1.5cm;
+    margin-right: 3cm;
+    @left-middle{
+    content: counter(page, decimal-leading-zero);
+    font-size:10pt;
+    color:black;
+    font-family: 'Hershey-Noailles-Times-Triplex-Light';
+    }
+  }
+
+  @page:right {
+    margin-left: 3cm;
+    margin-right: 1.5cm;
+    @right-middle {
+    content: counter(page, decimal-leading-zero);
+    font-size:10pt;
+    color:black;
+    font-family: 'Hershey-Noailles-Times-Triplex-Light';
+    }
+  }
+
+  @page:blank{
+      @bottom-left { content: none; }
+      @bottom-right {
+      content: none;
+      }
+      @bottom-center {
+      content: none;
+      }
+  }
+
+  @page:nth(1) { 
+    @bottom-center { content: none; } 
+    @right-middle{ content: none; }
+    @left-middle{ content: none; }
+  }
+  
+  @page:nth(2) { 
+    @left-middle{ content: none; }
+  }
+
+  @page:nth(3) { 
+    @bottom-center { content: none; } 
+    @right-middle{ content: none; }
+  }
+
+  @page:nth(4) { 
+    @bottom-center { content: "Le Web to Print"; }
+    @left-middle{ content: none; }
+  }
+
+  @page:nth(5) { 
+    @bottom-center { content: "Le Web to Print"; }
+    @right-middle{ content: none; }
+  }
+  
+  @page:nth(6) { 
+    @left-middle{ content: none; }
+  }
+
+  @page:nth(7) { 
+    @bottom-center { content: "Sommaire"; }
+    @right-middle{ content: none; }
+  }
+  
+  @page:nth(8) { 
+    @bottom-center { content: none; } 
+    @left-middle{ content: none; }
+  }
+
+  @page:nth(30) { @left-middle {content: none;}}
+  
+  @page:nth(31) {
+    @top-left { content: none; }
+    @bottom-center { content: "Imprimer cette édition"; }
+  }
+  
+  @page:nth(32) {
+    @bottom-center { content: "Méthodologie";}
+  }
+
+  @page:nth(33) {
+    @bottom-center { content: "Méthodologie"; }
+  }
+
+  @page:nth(34) { 
+    @left-middle {content: none; }
+    @bottom-center { content: "Colophon"; }
+  }
+
+.introduction h1{
+  font-family: 'Euripides-SemiBold';
+  page-break-after: right;
+  text-align: center;
+  margin-top:50%;
+}
+
+
+.contenu-principal{
+  break-before: left;
+}
+
+.titre-chapitre{
+  position: absolute;
+  top:-1cm;
+  color:transparent;
+  string-set: title content(text);
+}
     
+.gradient-container {
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  width:100%;
+  height:18cm;
+
+</div>
+
+<div class="columns">
+  min-height:100%;
+}
+
+.gradient-container figure {
+  width:3.6cm;
+  height:1.8cm;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+}
+
+.gradient-container figure img{
+  width:100%;
+  height:100%;
+  mix-blend-mode: overlay;
+  object-fit: cover;
+}
+
+.introduction p{
+  font-family: 'Hershey-Noailles-Duplex-Regular';
+}
+
+.introduction .explication-credit{
+  font-size:11pt;
+  line-height:10pt;  
+  font-style:normal;
+  font-family: 'Hershey-Noailles-Times-Triplex-Light';
+  margin:0.5cm 0 1cm 0;
+}
+
+em{
+  font-style:normal;
+}
+
+.introduction .ours{
+  page-break-after: left;
+  text-align:right;
+  margin-top:8.6cm;
+  font-size:11pt;
+  line-height:10pt;
+  position: absolute;
+  right:0;
+
+}
+
+.introduction .explication{
+  margin:0;
+  font-size:16pt;
+  line-height:15pt !important;
+
+}
+
+.introduction .last-explication{
+  page-break-after: right;
+}
+
+.introduction .interlude{
+  position:absolute;
+  font-family: 'Hershey-Noailles-Duplex-Regular';
+  top:calc(50% - 0.4cm);
+  transform: translate(0, -50%);
+  width:85%;
+  font-size:11pt;
+  line-height:10pt;
+}
+
+.introduction .sommaire{
+  font-size:16pt;
+  line-height:15pt;
+  font-family: 'Hershey-Noailles-Times-Triplex-Light';
+  text-transform:uppercase;
+  page-break-after:right;
+  margin:0;
+  padding:0;
+  top:0;
+  margin-top:-0.5cm;
+
+}
+
+.link{
+  padding-bottom:10px;
+}
+
+.link::before {
+  content: target-text(attr(href url)) ;
+}
+
+.link::after {
+  content: target-counter(attr(href url), page, decimal-leading-zero);
+  padding-right:50px;
+  font-weight:bolder;
+  position:absolute;
+  right:0;
+  padding:0;
+  text-align:right;
+}
+
+.introduction a {
+  text-decoration:none;
+  color:inherit;
+}
+
+a::after {
+  content: " (" attr(href) ")";
+}
+
+.espace-fine-avant:before{
+  content: "\00a0\00a0";
+  font-size:3pt;
+  color:black;
+}
+
+.espace-fine-apres:after{
+  content: "\00a0\00a0";
+  font-size:3pt;
+  color:black;
+}
+
+.conclusion{
+  color:black;
+  page-break-before: right;
+}
+
+.conclusion p, .conclusion ol{
+  font-size:12pt;
+  font-family: 'Hershey-Noailles-Duplex-Regular';
+  line-height: 10pt;
+}
+
+.conclusion .print-yourself{
+  page-break-after: always;
+  margin:0;
+  padding:0;
+  position: absolute;
+  bottom:0;
+}
+
+.conclusion .print-yourself li{
+  margin-left:1cm;
+}
+
+.conclusion .methodologie{
+  margin:0;
+}
+
+.conclusion  .last-methodologie{
+  page-break-after: always;
+}
+
+.conclusion code{
+  font-size:9pt;
+  line-height:2pt!important;
+}
+</div>
+
+<div class="columns">
+
+
+
+.conclusion .colophon{
+  margin:0;
+  position: absolute;
+  bottom:0;
+  font-family: 'Hershey-Noailles-Duplex-Regular';
+}
+
+}
+
+@media print{
+  @page {
+    size: 12.5cm 21cm;
+    margin-top: 1cm;
+    margin-bottom: 2cm;
+    bleed: 6mm;
+    marks: crop;
+  }
+  
+    @page:left {
+    margin-left: 1cm;
+    margin-right: 3cm;
+    }
+      @page:right {
+    margin-left: 3cm;
+    margin-right: 1cm;
+    }
+
+  @page:blank{
+      @top-left {
+      content:none;
+      }
+      @bottom-left {
+      content: none;
+      }
+      @bottom-right {
+      content: none;
+      }
+      @bottom-center {
+      content: none;
+      }
+  }
+  
+
+
+body{
+  margin:0;
+  padding:0;
+      font-family: 'Hershey-Noailles-Duplex-Regular';
+}
+
+a{
+  color:inherit;
+}
+
+
+h1{
+    writing-mode: sideways-lr;
+    -webkit-writing-mode: sideways-lr;
+    -ms-writing-mode: sideways-lr;
+    text-align: right;
+    position: absolute;
+    top: 0px;
+    right: -15px;
+    height: 60vh;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-family: 'Euripides-SemiBold';
+}
+
+
+.text-introductif{
+  width:75%;
+  position:absolute;
+  top:5.37cm;
+  font-size: 11pt;
+  line-height: 10pt;
+}
+
+dl{
+  position:absolute;
+  bottom:-0.5cm;
+  right:0;
+  text-align:right;
+  font-size: 10pt;
+}
+
+dt{
+  padding : 1px;
+  text-transform:uppercase;
+  color:white;
+  background-color : black;
+}
+
+dd{
+  padding:0;
+  margin:0;
+  color: black;
+}
+
+.retranscription{
+  page-break-before:left;
+  page-break-after:right;
+  margin:0;
+  font-size: 11pt;
+  line-height: 10pt !important;
+}
+
+
+em{
+  font-family: 'Hershey-Noailles-Times-Triplex-Light';
+  font-style:normal;
+  font-size: 9pt;
+  margin:0;
+  padding:0;
+}
+
+
+.retranscription span{
+text-decoration : black wavy underline;
+}
+
+
+}
+
+@media print {
+  @page {
+    size: 16cm 21cm;
+    bleed: 6mm;
+    marks: crop;
+    margin:0;
+  }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-family: monospace;
+  text-justify: auto;
+  font-size: 8pt;
+  margin-top:0.1cm;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.columns {
+  height: 100%;
+  width: 35%;
+  font-family: monospace;
+  text-justify: auto;
+  font-size: 7pt;
+}
+
+
+<br><br>
+
+<em>Le Paysan et le Marin
+<br/>
+Édition au format Web to Print autour de la question de la transmission d'expérience.
+<br/>
+ENSAAMA DSAA 1 Transmédia
+<br/>
+Édition réalisée du 13 mars au<br> 03 avril 2024 dans le cadre d'un workshop avec Milène Laforge.</em>
+
+</div>
+</div>
+
+<div class="back">Anna CHOTARD<br>Capucine CLÉMENCE<br>Océane DUBUJET<br>Cassandre GUIOT<br>Enrico ISIDORI<br>Zacharie LANTOINE<br>Lola LE-VIENT<br>Alice NORMAND<br>Pauline PALERMO<br>Josselin ROMÉ<br>Ksénia TIMONINE<br>Juliette VENDRAN</div>
+
+
+</body>    
 </html>
