@@ -2,11 +2,16 @@
 <html lang="fr">
 
 <head>
-    <meta charset="utf8">
-    <script src="assets-md/js/markdown-it.js"></script>
-    <script src="js/script.js" defer></script>
-    <title>Édition web to print</title>
-    <style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenu Principal</title>
+    <link href="css/contenu.css" rel="stylesheet" type="text/css" />
+    <link href="css/interface.css" rel="stylesheet" type="text/css" />
+    <script src="js/paged.polyfill.js"></script>
+    <script src="js/reload-in-place.js"></script>
+
+<style>
     @font-face { 
         font-family: 'Hershey-Noailles-Times-Duplex-Bold';
         src: url('assets/fontes/Hershey-Noailles-Times-Duplex-Bold.otf') format('opentype');
@@ -15,28 +20,757 @@
         font-family: 'Hershey-Noailles-Times-Triplex-Light';
         src: url('assets/fontes/Hershey-Noailles-Times-Triplex-Light.otf') format('opentype');
     }
+
     @font-face { 
-        font-family: '_Euripides-SemiBold_web(1)';
-        src: url('assets/fontes/_Euripides-SemiBold_web(1).ttf') format('truetype');
+        font-family: 'Hershey-Noailles-Duplex-Regular';
+        src: url('assets/fontes/Hershey-Noailles-Duplex-Regular.otf') format('opentype');
     }
-    </style>
+
+    @font-face { 
+        font-family: 'Hershey-Noailles-Times-Triplex-Italic-Regular';
+        src: url('assets/fontes/Hershey-Noailles-Times-Triplex-Italic-Regular.otf') format('opentype');
+    }
+
+    @font-face { 
+        font-family: 'Euripides-SemiBold';
+        src: url('assets/fontes/Euripides-SemiBold.ttf') format('truetype');
+    }
+</style>
 </head>
 
 <body>
+
+<!-- Introduction --> 
+<section class="introduction">
+
+<div class="cover">
+    Le Paysan et le Marin<br/>
+    Édition au format Web to Print autour de la question de la transmission d'expérience.<br/>
+    ENSAAMA DSAA 1 Transmédia<br/>
+    Édition réalisée du 13 mars au <br>03 avril 2024 dans le cadre d'un workshop avec Milène Laforge.
+</div>
+
+
+<p class="ours">
+Merci au graphisme libre<br> et à ses acteurs.
+</p>
+
+<p class="explication">
+Depuis qu’il est possible d’exporter des PDFs à partir d’une page web, les outils originellement développés pour la mise en page web (sur écran), comme le HTML, le CSS et le Javascript, sont devenus une alternative aux outils existants pour faire des mises en page exportées en PDF pour l’impression. <br><br>
+Faire de la mise en page dans un navigateur web et avec des langages HTML et CSS permet non seulement de travailler de manière cartésienne, avec des pages fixes, aux contours bien définis, dans lesquelles les contenus sont positionnés également de manière fixes, comme avec les logiciels de mise en page Scribus, InDesign et QuarkXPress. Mais il est aussi possible de travailler avec les propriétés spécifiques aux écrans, à savoir leur potentiel à s’adapter aux différents formats et re-formatages des fenêtres de visualisation, leur interactivité, etc. Il devient alors possible de travailler plusieurs formats sur base de la même source, stylée différemment pour les différents écrans et formats papier (single source publishing) <br><br>
+Ici, on pourrait repenser les dichotomies écran/papier, développement d’outils/travail graphique… Les langages HTML, CSS et Javascript sont sous license libre, ce qui permet non seulement de les utiliser pour faire de la mise en page, mais également de créer des outils de mise en page à partir de ces langages, et de les diffuser. Travailler avec ces outils permet également d’établir une chaîne de travail basée sur une source principale, dans un écosystème libre, standard et durable.
+</p>
+
+<p class="explication-credit"><em >Texte issu du cours rédigé par Loraine Furter :
+    <a href="https://www.design-research.be/hybrid/publications.html">
+    TROUBLE DANS LE GENRE - PÉDAGOGIE ALTERNATIVE DE L’ÉDITION HYBRIDE</a>
+</em></p>
+    
+<p class="explication last-explication">
+    Faire des publications en web to print signifie se placer dans une posture de recherche. L’important quand on s’essaye à ce genre d’outils est de se rappeler que la qualité d’une publication ne se situe pas simplement dans sa forme mais aussi et peut-être surtout dans sa chaine de conception. Il s’agit aussi de travailler avec des outils conçus par des gens que l’on connait–que l’on comprend–dont on comprend le travail.
+</p>
+
+
+
+<div class="sommaire">
+        <p class="link" href="#chapter-1">&emsp;</p>
+        <p class="link" href="#chapter-2">&emsp;</p>
+        <p class="link" href="#chapter-3">&emsp;</p>
+        <p class="link" href="#chapter-4">&emsp;</p>
+        <p class="link" href="#chapter-5">&emsp;</p>
+        <p class="link" href="#chapter-6">&emsp;</p>
+        <p class="link" href="#chapter-7">&emsp;</p>
+        <p class="link" href="#chapter-8">&emsp;</p>
+        <p class="link" href="#chapter-9">&emsp;</p>
+        <p class="link" href="#chapter-10">&emsp;</p>
+</div>
+
+
+
+<div class="interlude">
+«L’expérience transmise oralement est la source où tous les narrateurs ont puisé. Et parmi ceux qui ont couché par écrit des histoires, ceux-là sont les grands narrateurs dont le texte s’écarte le moins des paroles des innombrables narrateurs anonymes. il faut du reste distinguer parmi ces derniers deux groupes qui ne cessent sans doute de se pénétrer l’un l’autre. Le personnage du narrateur ne doit toute sa plénitude qu’à cette double origine. «Quiconque a beaucoup vu, peut avoir beaucoup retenu», dit le proverbe allemand, et se représente le narrateur comme quelqu’un qui revient de loin. Mais on prend autant de plaisir à écouter celui qui, gagnant honnêtement son pain, est resté au pays et connaît ses histoires et ses traditions. C’est ainsi que le paysan sédentaire et le marin négociant représentent chacun le type archaïque des deux groupes. En effet, le milieu de chacun d’eux a produit sa propre lignée de narrateurs. Il n’en reste pas moins que l’on ne peut concevoir le domaine de la narration dans toute son ampleur historique sans une très intime pénétration réciproque de ces deux types archaïques.» <br> <br> Walter Benjamin
+</div>
+
+</section>
+
+<section class="contenu-principal">
+
+<!-- POPO-->
+<div class="gradient-container container-1">
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_00_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_04_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_08_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_10_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_12_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_14_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_16_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_18_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_20_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_22_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_26_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_30_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_34_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_36_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_40_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_48_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_60_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_61_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_65_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_66_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_68_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_71_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_76_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_77_GRAY.jpg"></figure>
+</div>
+<h3 class="titre-chapitre" id="chapter-1">La rencontre</h3>
+
+<div class="gradient-container container-2">
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_81_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_82_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_84_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_86_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_91_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_93_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_95_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_97_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_102_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_103_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_104_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_107_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_108_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_115_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_120_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_125_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_126_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_134_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_135_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_137_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_156_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_162_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_165_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_RENCONTRE/LA_RENCONTRE_177_GRAY.jpg"></figure>
+</div>
+
+<!--Capu Océane-->
+<div class="gradient-container container-3">
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_00_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_02_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_03_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_04_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_05_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_06_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_07_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_08_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_09_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_10_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_11_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_12_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_13_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_14_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_15_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_17_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_19_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_20_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_21_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_22_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_23_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_24_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_25_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_26_GRAY.jpg"></figure>
+</div>
+<h3 class="titre-chapitre" id="chapter-2">Jeux de mains</h3>
+
+<div class="gradient-container container-4">
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_27_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_28_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_29_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_30_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_31_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_32_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_33_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_34_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_35_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_36_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_37_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_38_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_39_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_40_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_41_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_42_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_43_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_44_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_45_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_46_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_47_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_48_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_49_GRAY.jpg"></figure>
+    <figure><img src="assets/images/JEUX_DE_MAINS/JEUX_DE_MAINS_50_GRAY.jpg"></figure>
+</div>
+
+
+<!--Josselin-->
+<div class="gradient-container container-5">
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_01_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_02_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_03_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_04_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_05_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_06_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_07_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_08_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_09_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_10_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_11_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_12_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_13_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_14_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_15_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_16_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_17_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_18_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_19_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_20_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_21_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_22_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_23_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_24_GRAY.jpg"></figure>
+</div>
+<h3 class="titre-chapitre" id="chapter-3">La Coupe</h3>
+
+<div class="gradient-container container-6">
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_25_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_26_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_27_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_28_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_29_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_30_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_31_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_32_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_33_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_34_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_35_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_36_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_37_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_38_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_39_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_40_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_41_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_42_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_43_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_44_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_45_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_46_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_47_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LA_COUPE/LA_COUPE_48_GRAY.jpg"></figure>
+</div>
+
+<!-- Ksénia --> 
+<div class="gradient-container container-7">
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_09_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_10_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_11_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_12_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_13_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_14_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_15_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_16_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_17_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_18_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_19_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_20_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_21_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_22_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_23_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_24_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_25_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_26_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_27_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_28_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_29_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_30_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_31_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_32_GRAY.jpg"></figure>
+</div>
+<h3 class="titre-chapitre" id="chapter-4">Le chant d'oiseaux</h3>
+
+<div class="gradient-container container-8">
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_33_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_34_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_35_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_36_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_37_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_38_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_39_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_40_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_41_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_42_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_43_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_44_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_45_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_46_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_47_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_48_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_49_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_50_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_51_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_52_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_53_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_54_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_55_GRAY.jpg"></figure>
+    <figure><img src="assets/images/LE_CHANT_D_OISEAUX/LE_CHANT_D_OISEAUX_56_GRAY.jpg"></figure>
+</div>
+
+
+<!--Enrico-->
+<div class="gradient-container container-9">
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_01_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_02_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_03_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_04_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_05_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_06_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_07_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_08_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_09_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_10_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_11_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_12_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_13_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_14_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_15_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_16_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_17_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_18_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_19_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_03_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_20_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_21_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_22_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_23_GRAY.jpg"></figure>
+</div>
+<h3 class="titre-chapitre" id="chapter-5">On death without exaggeration</h3>
+
+<div class="gradient-container container-10">
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_25_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_26_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_27_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_28_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_29_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_30_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_31_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_32_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_33_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_34_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_35_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_36_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_37_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_38_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_39_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_40_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_41_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_42_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_43_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_44_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_45_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_46_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_47_GRAY.jpg"></figure>
+    <figure><img src="assets/images/ON_DEATH_WITHOUT_EXAGGERATION/ON_DEATH_WITHOUT_EXAGGERATION_48_GRAY.jpg"></figure>
+</div>
+
+
+<!-- Alice -->
+<div class="gradient-container container-11">
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_00_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_01_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_02_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_03_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_04_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_05_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_06_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_07_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_08_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_09_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_10_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_11_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_12_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_13_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_14_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_15_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_16_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_17_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_18_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_19_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_20_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_21_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_22_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_23_GRAY.jpg"></figure>
+</div>
+<h3 class="titre-chapitre" id="chapter-6">Ça ne sert à rien d'aller sur Mars</h3>
+
+<div class="gradient-container container-12">
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_25_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_26_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_27_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_28_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_29_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_30_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_31_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_32_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_33_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_34_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_35_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_36_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_37_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_38_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_39_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_40_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_16_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_41_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_42_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_43_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_45_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_46_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_47_GRAY.jpg"></figure>
+    <figure><img src="assets/images/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS/CA_NE_SERT_A_RIEN_DALLER_SUR_MARS_48_GRAY.jpg"></figure>
+</div>
+
+<!--Cassandre-->
+<div class="gradient-container container-13">
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_00.jpg"></figure> 
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_01.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_02.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_03.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_05.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_06.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_08.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_09.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_11.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_12.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_13.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_14.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_15.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_16.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_18.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_20.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_23.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_24.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_25.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_27.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_28.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_29.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_31.jpg"></figure> 
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_32.jpg"></figure> 
+</div>
+<h3 class="titre-chapitre" id="chapter-7">Gestes Maternels</h3>
+
+<div class="gradient-container container-14">
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_33.jpg"></figure> 
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_34.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_35.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_36.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_37.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_38.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_39.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_40.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_41.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_42.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_43.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_44.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_45.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_48.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_49.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_50.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_51.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_52.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_53.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_54.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_55.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_56.jpg"></figure>
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_57.jpg"></figure> 
+    <figure><img src="assets/images/GESTES_MATERNELS/GESTES_MATERNELS_58.jpg"></figure> 
+</div>
+
+
+
+<!-- Zacharie-->
+<div class="gradient-container container-15">
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_01_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_02_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_03_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_04_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_05_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_06_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_07_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_08_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_09_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_10_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_11_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_12_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_13_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_14_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_15_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_16_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_17_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_18_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_19_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_20_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_21_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_22_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_23_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_24_GRAY.jpg"></figure>
+</div>  
+<h3 class="titre-chapitre" id="chapter-8">Maxheadroom</h3>
+
+<div class="gradient-container container-16">
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_25_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_26_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_27_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_28_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_29_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_30_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_31_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_32_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_33_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_34_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_35_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_36_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_37_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_38_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_39_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_40_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_41_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_42_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_43_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_44_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_45_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_46_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_47_GRAY.jpg"></figure>
+    <figure><img src="assets/images/MAXHEADROOM/MAXHEADROOM_48_GRAY.jpg"></figure>
+</div>  
+
+<!-- Lola -->
+
+<div class="gradient-container container-17">
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_00_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_01_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_02_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_03_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_04_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_05_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_06_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_07_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_08_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_09_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_10_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_11_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_12_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_13_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_14_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_15_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_16_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_17_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_18_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_19_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_20_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_21_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_22_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_23_GRAY.jpg"></figure>
+</div>
+<h3 class="titre-chapitre" id="chapter-9">Histoire de pierres</h3>
+
+<div class="gradient-container container-18">
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_24_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_25_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_26_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_27_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_28_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_29_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_30_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_31_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_32_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_33_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_34_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_35_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_36_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_37_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_38_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_39_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_40_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_41_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_42_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_43_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_44_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_45_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_46_GRAY.jpg"></figure>
+    <figure><img src="assets/images/HISTOIRE_DE_PIERRES/HISTOIRE_DE_PIERRES_47_GRAY.jpg"></figure>
+</div>
+
+<!--Juliette -->
+<div class="gradient-container container-19">
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_00.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_01.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_02.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_03.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_04.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_05.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_06.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_07.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_08.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_09.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_10.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_11.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_12.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_13.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_14.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_15.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_16.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_17.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_18.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_19.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_20.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_21.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_22.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_23.jpg"></figure>
+</div>
+<h3 class="titre-chapitre" id="chapter-10">Si j'avais eu toute ma tête</h3>
+
+
+<div class="gradient-container container-20">
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_24.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_25.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_26.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_27.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_28.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_29.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_30.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_31.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_32.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_33.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_34.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_35.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_36.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_37.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_38.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_39.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_40.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_41.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_42.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_43.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_44.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_45.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_46.jpg"></figure>
+    <figure><img src="assets/images/SI_JAVAIS_EU_TOUTE_MA_TETE/SI_JAVAIS_EU_TOUTE_MA_TETE_47.jpg"></figure>
+</div>
+
+</section>
+
+<!-- Conclusion -->
+<section class="conclusion">
+
+<ol class="print-yourself">
+        Pour imprimer et façonner cette édition vous même, vous devez suivre ces étapes: <br><br>
+        <li>Ouvrir le lien suivant sur un navigateur <br>(Chrome ou Firefox)<br> milenelaforge.github.io/edition-ensaama/index.html</li>
+        <li>Cliquer sur sur Imprimer la page d’après le site internet (ou en faisant Contrôle / Commande + P)</li>
+        <li>Sur la fenêtre d’impression, enregistrer le PDF. </li>
+        <li>Exporter et imprimer les pages en recto verso (A4) </li>
+        <li>Trouer les feuilles avec une perforatrice à 2 endroits selon les dimensions de la reliure </li>
+        <li>Placer la reliure dans les trous et assembler l’édition en suivant la pagination</li>
+        <li>Une fois assemblé, passer à la massicoteuse.</li><br>
+        Votre édition est prête! 
+</ol>
+
+<p class="methodologie">
+        Pour mettre en avant le côté collaboratif d’une édition web to print, nous avons choisi de travailler sur des pads.
+        Le contenu et la mise en page du contenu ont été rédigés sur deux pads hébergés pour une durée limité sur Framapad.<br><br>
+        Un pad est dédié à l’éditorialisation de notre livre (rédigé HTML) et l’autre est dédié au style, à l’apparence (rédigé en CSS). 
+        Grâce aux fonctionnalités de la librairie Paged.js, le navigateur nous sert d’interface de visualisation et d’exportation en PDF. 
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Pour combiner le document HTML et la feuille de style CSS dans un même index, nous avons utilisé MardownIt.js.<br> Merci à Quentin Juhel pour son aide!
+</p>
+
+<div><code>
+    <br>
+        var markdownit = window.markdownit({<br>
+                &nbsp;&nbsp;// Options for markdownit<br>
+                &nbsp;&nbsp;langPrefix: 'language-fr',<br>
+                &nbsp;&nbsp;// You can use html markup element<br>
+                &nbsp;&nbsp;html: true;<br>
+        var request = new XMLHttpRequest();<br>
+        request.open("GET", "https://semestriel.framapad.org/p/workshop-w2p-html-a6kf/export/txt");<br>
+        <br>
+        request.addEventListener("readystatechange", function(event) {<br>
+            &nbsp;if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {<br>
+                &nbsp;&nbsp;var response = request.responseText;<br>
+                <br>
+                &nbsp;&nbsp;var result = markdownit.render(response);<br>
+                &nbsp;&nbsp;document.body.innerHTML = result;<br><br>
+                &nbsp;&nbsp;// Call each script one by one<br>
+                &nbsp;&nbsp;loadScript("assets-md/js/paged.polyfill.js")<br>
+                <br>
+                &nbsp;&nbsp;//add the paged.js css<br>
+                &nbsp;&nbsp;var pagedCss = document.createElement("link");<br>
+                &nbsp;&nbsp;pagedCss.href = "css/interface.css";<br>
+                &nbsp;&nbsp;pagedCss.type = "text/css";<br>
+                &nbsp;&nbsp;pagedCss.rel = "stylesheet";<br>
+                &nbsp;&nbsp;document.head.appendChild(pagedCss);<br>
+                &nbsp;&nbsp;//add the pad with the css<br>
+                &nbsp;&nbsp;var theCss = document.createElement("link");<br>
+                &nbsp;&nbsp;theCss.href = "https://semestriel.framapad.org/p/workshop-w2p-css-a6jt/export/txt";<br>
+                &nbsp;&nbsp;theCss.type = "text/css";<br>
+                &nbsp;&nbsp;theCss.rel = "stylesheet";<br>
+                &nbsp;&nbsp;document.head.appendChild(theCss);<br>
+            &nbsp;}<br>
+        });<br>
+        <br>
+        request.send();<br>
+        <br>
+        // Create a promise<br>
+        function loadScript(src) {<br>
+            &nbsp;return new Promise(function(resolve, reject) {<br>
+                &nbsp;&nbsp;let script = document.createElement('script');<br>
+                &nbsp;&nbsp;script.src = src;<br>
+                <br>
+                &nbsp;&nbsp;script.onload = () => resolve(script);<br>
+                &nbsp;&nbsp;script.onerror = () => reject(new Error(`Script load error for ${src}`));<br>
+                <br>
+                &nbsp;&nbsp;document.body.appendChild(script);<br>
+            &nbsp;});<br>
+        }<br><br>
+        </code></div>
+
+
+<p class="methodologie last-methodologie">        
+        Nous aurions également pu utiliser ether2HTML, un outil conçu par Opensource Publishing. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Toute la documentation ainsi que le site est hébergé sur Github. 
+        Vous pouvez retrouver l’ensemble de la documentation du workshop sur le Github Pages https://milenelaforge.github.io/.
+</p>
+
+
+
+<div class="colophon">
+        Cette édition a été réalisée du 13 mars au 03 avril 2024 dans le contexte d’un workshop Web to print supervisé par Milène Laforge.<br><br>
+        Il s’agit d’une publication composée par les 24 mains des élèves de DSAA 1 Transmédia de l’ensaama: <br>
+        Anna CHOTARD, Capucine CLÉMENCE, Océane DUBUJET, Cassandre GUIOT, Enrico ISIDORI, Zacharie LANTOINE, Lola LE-VIENT, Alice NORMAND, Pauline PALERMO, Josselin ROMÉ, Ksénia TIMONINE, Juliette VENDRAN.<br><br>
+        Merci à Anne Barrois et Arnaud Homann pour la mise en place de ce workshop. <br><br>
+        20 exemplaires ont été façonné pendant le workshop.<br><br>
+        Polices de caractères: <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Euripides (Tanvi Sharma)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Hershey-Noailles (Luuse)<br>
+        Papiers: <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Papier Vert : Papier Clair Fontaine 97151C 120g<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Papier Blanc : Papier Munken White 1,8 115g <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Papier Bleu : Papier Clair Fontaine 97157C 120g<br>
+        Outils et langages utilisés: <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;HTML et CSS + Paged.js (pour le Web to print)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Python (Speech to text + OpenCV)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;Github pages pour la documentation.<br>
+</div>
+
+
+
+</section>
+
+
 </body>
 
-<script>
-const paragraphs = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, em, strong, li');
-
-paragraphs.forEach(paragraph => {
-    const text = paragraph.textContent;
-
-    let modifiedText = text;
-
-    modifiedText = modifiedText.replace(/([»!;:])/g, '<span class="espace-fine-avant">$1</span>');
-    modifiedText = modifiedText.replace(/([«])/g, '<span class="espace-fine-apres">$1</span>');
-
-    paragraph.innerHTML = modifiedText;
-});
-</script>
 </html>
