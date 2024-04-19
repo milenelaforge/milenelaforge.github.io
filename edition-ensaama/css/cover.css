@@ -1,0 +1,65 @@
+/*Bienvenue sur le pad CSS pour la couverture*/
+
+@media print {
+  @page {
+    size: 16cm 21cm;
+    bleed: 6mm;
+    marks: crop;
+    margin:0;
+    margin-bottom:0;
+  }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-family: monospace;
+  text-justify: auto;
+  font-size: 8pt;
+  margin-top:0.1cm;
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url('motif-cover.jpg'); 
+    background-size: cover;
+    -webkit-mask-image: url('motif-cover.jpg'); 
+    mask-image: url('motif-cover.jpg'); 
+}
+
+.columns {
+  height: 100%;
+  width: 35%;
+  font-family: monospace;
+  text-justify: auto;
+  font-size: 7pt;
+}
+
+.columns em {
+  font-style: normal;
+  position:absolute;
+  bottom:0.25cm;
+  font-family: 'Hershey-Noailles-Duplex-Regular';
+  font-size:9pt;
+    color: black;
+    -webkit-text-fill-color: black;
+
+}
+
+.back{
+  text-align:center;
+  break-before: always;
+  font-size:20pt;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+  position: absolute;
+  left:25%;
+  width:50%;
+  top:-50%;
+  font-family: 'Hershey-Noailles-Duplex-Regular';
+}  
+    
+
+}

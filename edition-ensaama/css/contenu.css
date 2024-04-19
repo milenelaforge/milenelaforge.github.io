@@ -1,0 +1,349 @@
+@media print{
+  @page {
+    size: 16cm 21cm;
+    margin-top: 1cm;
+    margin-bottom: 2cm;
+    bleed: 6mm;
+    marks: crop;
+    @bottom-center {
+      content: string(title);
+      text-transform:uppercase;
+      font-size:12pt;
+      color:black;
+      font-family: 'Hershey-Noailles-Duplex-Regular';
+    }
+  }
+
+  @page:left {
+    margin-left: 1.5cm;
+    margin-right: 3cm;
+    @left-middle{
+    content: counter(page, decimal-leading-zero);
+    font-size:10pt;
+    color:black;
+      font-family: 'Hershey-Noailles-Duplex-Regular';
+    }
+  }
+
+  @page:right {
+    margin-left: 3cm;
+    margin-right: 1.5cm;
+    @right-middle {
+    content: counter(page, decimal-leading-zero);
+    font-size:10pt;
+    color:black;
+    font-family: 'Hershey-Noailles-Duplex-Regular';
+    }
+  }
+
+  @page:blank{
+      @bottom-left { content: none; }
+      @bottom-right {
+      content: none;
+      }
+      @bottom-center {
+      content: none;
+      }
+  }
+
+  @page:nth(1) { 
+    @bottom-center { content: none; } 
+    @right-middle{ content: none; }
+    @left-middle{ content: none; }
+    margin: 0;
+  }
+  
+  @page:nth(2) { 
+    @left-middle{ content: none; }
+  }
+
+  @page:nth(3) { 
+    @bottom-center { content: none; } 
+    @right-middle{ content: none; }
+  }
+
+  @page:nth(4) { 
+    @bottom-center { content: "Le Web to Print"; }
+    @left-middle{ content: none; }
+  }
+
+  @page:nth(5) { 
+    @bottom-center { content: "Le Web to Print"; }
+    @right-middle{ content: none; }
+  }
+  
+  @page:nth(6) { 
+    @left-middle{ content: none; }
+  }
+
+  @page:nth(7) { 
+    @bottom-center { content: "Sommaire"; }
+    @right-middle{ content: none; }
+  }
+  
+  @page:nth(8) { 
+    @bottom-center { content: none; } 
+    @left-middle{ content: none; }
+  }
+
+
+  @page:nth(30) { @left-middle {content: none;}}
+  
+  @page:nth(31) {
+    @top-left { content: none; }
+    @bottom-center { content: "Imprimer cette édition"; }
+  }
+  
+  @page:nth(32) {
+    @bottom-center { content: "Méthodologie";}
+  }
+
+  @page:nth(33) {
+    @bottom-center { content: "Méthodologie"; }
+  }
+
+  @page:nth(34) { 
+    @left-middle {content: none; }
+    @bottom-center { content: "Colophon"; }
+  }
+
+/* COUVERTURE ---------------------*/ 
+/* ----------------------------------*/
+
+
+.cover{
+  font-family: monospace;
+  text-justify: auto;
+  font-size: 9pt;
+  position:absolute;
+  bottom:0;
+  width: 33.4%;
+  right:0;
+  page-break-after: right;
+  font-family: 'Hershey-Noailles-Duplex-Regular';
+
+}
+
+/* INTRODUCTION ---------------------*/ 
+/* ----------------------------------*/
+
+
+
+.introduction p{
+  font-family: 'Hershey-Noailles-Duplex-Regular';
+}
+
+.introduction .explication-credit{
+  font-size:11pt;
+  line-height:10pt;  
+  font-style:normal;
+  font-family: 'Hershey-Noailles-Duplex-Regular';
+  margin:0.5cm 0 1cm 0;
+}
+
+em{
+  font-style:normal;
+}
+
+
+.introduction .ours{
+  page-break-after: left;
+  text-align:right;
+  margin-top:8.6cm;
+  font-size:11pt;
+  line-height:10pt;
+  position: absolute;
+  right:0;
+
+}
+
+.introduction .explication{
+  margin:0;
+  font-size:16pt;
+  line-height:15pt !important;
+
+}
+
+.introduction .last-explication{
+  page-break-after: right;
+}
+
+.introduction .interlude{
+  position:absolute;
+  font-family: 'Hershey-Noailles-Duplex-Regular';
+  top:calc(50% - 0.4cm);
+  transform: translate(0, -50%);
+  width:85%;
+  font-size:11pt;
+  line-height:10pt;
+  color:#618cc9;
+}
+
+
+/* Sommaire --------*/
+
+.introduction .sommaire{
+  font-size:16pt;
+  line-height:15pt;
+  font-family: 'Hershey-Noailles-Duplex-Regular';
+  text-transform:uppercase;
+  page-break-after:right;
+  margin:0;
+  padding:0;
+  top:0;
+  margin-top:-0.5cm;
+
+}
+
+.link{
+  padding-bottom:10px;
+}
+
+.link::before {
+  content: target-text(attr(href url)) ;
+}
+
+.link::after {
+  content: target-counter(attr(href url), page, decimal-leading-zero);
+  padding-right:50px;
+  font-weight:bolder;
+  position:absolute;
+  right:0;
+  padding:0;
+  text-align:right;
+}
+
+.introduction a {
+  text-decoration:none;
+  color:inherit;
+}
+
+a::after {
+  content: " (" attr(href) ")";
+}
+
+/* PAGES IMAGES ---------------------*/
+/* ----------------------------------*/
+
+.contenu-principal{
+  break-before: left;
+}
+
+.titre-chapitre{
+  position: absolute;
+  top:-1cm;
+  color:transparent;
+  string-set: title content(text);
+}
+    
+.gradient-container {
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  width:100%;
+  height:18cm;
+  min-height:100%;
+}
+.container-1 figure{ background-color:#618cc9; }
+.container-2 figure{ background-color:#5e8cc1; }
+.container-3 figure{ background-color:#5d8dbf; }
+.container-4 figure{ background-color:#5a8db8; }
+.container-5 figure{ background-color:#5b8db5; }
+.container-6 figure{ background-color:#578caa; }
+.container-7 figure{ background-color:#548da8; }
+.container-8 figure{ background-color:#518c97; }
+.container-9 figure{ background-color:#4f8b94; }
+.container-10 figure{ background-color:#4f8a8a; }
+.container-11 figure{ background-color:#4b8b88; }
+.container-12 figure{ background-color:#488a7f; }
+.container-13 figure{ background-color:#48897b; }
+.container-14 figure{ background-color:#46896f; }
+.container-15 figure{ background-color:#43886b; }
+.container-16 figure{ background-color:#438861; }
+.container-17 figure{ background-color:#3f885e; }
+.container-18 figure{ background-color:#3d864e; }
+.container-19 figure{ background-color:#38874b; }
+.container-20 figure{ background-color:#358639; }
+
+
+.gradient-container figure {
+  width:3.6cm;
+  height:1.8cm;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+}
+
+.gradient-container figure img{
+  width:100%;
+  height:100%;
+  mix-blend-mode: multiply;
+  object-fit: cover;
+}
+
+.espace-fine-avant:before{
+  content: "\00a0\00a0";
+  font-size:3pt;
+  color:black;
+}
+
+.espace-fine-apres:after{
+  content: "\00a0\00a0";
+  font-size:3pt;
+  color:black;
+}
+
+
+/* CONCLUSION -----------------------*/
+/* ----------------------------------*/
+  
+.conclusion{
+  color:black;
+  page-break-before: right;
+}
+
+.conclusion p, .conclusion ol{
+  font-size:12pt;
+  font-family: 'Hershey-Noailles-Duplex-Regular';
+  line-height: 10pt;
+}
+
+.conclusion .print-yourself{
+  page-break-after: always;
+  margin:0;
+  padding:0;
+  position: absolute;
+  bottom:0;
+}
+
+.conclusion .print-yourself li{
+  margin-left:1cm;
+}
+
+.conclusion .methodologie{
+  margin:0;
+}
+
+.conclusion  .last-methodologie{
+  page-break-after: always;
+}
+
+.conclusion code{
+  font-size:9pt;
+  line-height:2pt!important;
+}
+
+.conclusion .colophon{
+  margin:0;
+  position: absolute;
+  bottom:0;
+  font-family: 'Hershey-Noailles-Duplex-Regular';
+}
+
+
+}
+
+
+
