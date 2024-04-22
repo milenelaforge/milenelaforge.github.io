@@ -14,9 +14,9 @@ En suivant ce <a href="../edition-ensaama">lien </a>, vous accéderez au répert
 <br>
 
 # Télécharger les PDFs de l'édition 
-En suivant ce <a href="../assets/Document/WW2P_Contenu-Principal.pdf" download="">lien </a>, vous téléchargerez le PDF principal.  
-En suivant ce <a href="../assets/Document/WW2P_Intercalaires.pdf" download="">lien </a>, vous téléchargerez le PDF des intercalaires.  
-En suivant ce <a href="../assets/Document/WW2P_Cover.pdf" download="">lien </a>, vous téléchargerez le PDF de la couverture. 
+En suivant ce <a href="../assets/Document/WW2P_Contenu-Principal.pdf" download="">lien </a>, vous téléchargerez le PDF principal. (7,1 Mo)
+En suivant ce <a href="../assets/Document/WW2P_Intercalaires.pdf" download="">lien </a>, vous téléchargerez le PDF des intercalaires. (195 Ko)
+En suivant ce <a href="../assets/Document/WW2P_Cover.pdf" download="">lien </a>, vous téléchargerez le PDF de la couverture. (470 Ko)
 <br>
 <br>
 <br>
