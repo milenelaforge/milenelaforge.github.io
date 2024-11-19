@@ -90,8 +90,8 @@
         loadMarkdownIntoDiv(markdownFileURL18, 'programme');
         loadMarkdownIntoDiv(markdownFileURL19, 'workshop-in-progress');
         loadMarkdownIntoDiv(markdownFileURL20, 'liens');
-        loadMarkdownIntoDiv(markdownFileURL22, 'html-code');
-        loadMarkdownIntoDiv(markdownFileURL23, 'css-code');
+        loadMarkdownIntoDiv(markdownFileURL21, 'html-code');
+        loadMarkdownIntoDiv(markdownFileURL22, 'css-code');
         loadMarkdownIntoDiv(markdownFileURL23, 'retour-en-images');
 
 
