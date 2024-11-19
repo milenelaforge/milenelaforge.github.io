@@ -36,7 +36,7 @@ un espace d’entraide, de partage d’expériences, d’outils et d’usages, p
 <img src="sources/Images/ppp.png" width="500"/>
 <img src="../Images/ppp.png" width="500"/>
 <img src="../../Images/ppp.png" width="500"/>
-<img src="https://github.com/milenelaforge/milenelaforge.github.io/blob/main/sources/Images/ppp.png" width="500"/>
+<img src="https://raw.githubusercontent.com/milenelaforge/milenelaforge.github.io/refs/heads/main/sources/Images/ppp.png" width="500"/>
 <br>
 Sur le site vous pouvez retrouver cette description : 
 PrePostPrint est un label et un site web visant à promouvoir des objets et des ressources graphiques répondant aux caractéristiques suivantes :
