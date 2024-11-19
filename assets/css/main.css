@@ -1,0 +1,57 @@
+/*PAGE SETTINGS-----------------------*/
+/*------------------------------------*/
+
+html, * {
+    margin: 0;
+    padding:0;
+    font-family: 'Paragon-Regular';
+    font-weight:normal;
+    font-size:7vh;
+    color:dodgerblue;
+}
+
+body{
+    background-color:whitesmoke;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height:5px;
+    background-color: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb
+{
+    width: 5px;
+    height:5px;
+    background-color: yellowgreen;
+    border-radius: 0px;
+}
+
+/*TYPEFACES -----------------------*/
+/*------------------------------------*/
+
+@font-face { 
+    font-family: 'Paragon-Regular';
+    src: url('fontes/Paragon-Regular.otf') format('opentype');
+}
+
+/*HEADER SETTINGS --------------------*/
+/*------------------------------------*/
+
+/*SECTION SETTINGS -------------------*/
+/*------------------------------------*/
+
+section{
+    display:flex;
+    flex-direction: column;
+    background-color: lightyellow;
+    position:fixed;
+    left:15vw;
+    top:15vh;
+    width:70vw;
+    height:70vh;
+}
+
+
+
