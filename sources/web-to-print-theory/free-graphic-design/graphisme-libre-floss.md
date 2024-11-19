@@ -33,7 +33,7 @@ fondant PrePostPrint. Les enjeux de PPP sont multiples, aujourd’hui PPP peut �
 l’envie d’expérimenter et de partager des approches alternatives de la publication, de l’édition et de la production d’objets imprimés. C’est une communauté de pratiques, 
 un espace d’entraide, de partage d’expériences, d’outils et d’usages, profondément ancré dans le mouvement du libre. 
 <br><br>
-<img src="../../images/ppp.png" width="500"/>
+<img src="../images/ppp.png" width="500"/>
 <br>
 Sur le site vous pouvez retrouver cette description : 
 PrePostPrint est un label et un site web visant à promouvoir des objets et des ressources graphiques répondant aux caractéristiques suivantes :
