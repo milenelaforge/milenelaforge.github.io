@@ -8,7 +8,7 @@ Enfin, en suivant ce <a href="https://milenelaforge.github.io/edition-ensaama/co
 <br>
 
 # Télécharger tout le dossier de l'édition   
-En suivant ce <a href="../edition-ensaama">lien</a>, vous accéderez au répertoire Github où vous pourrez télécharger ou cloner l'ensemble du dossier.  
+En suivant ce <a href="https://github.com/milenelaforge/milenelaforge.github.io/blob/main/workshop-web-to-print-04-2024/edition-resultat-brut.zip" download>lien de téléchargement</a>, vous téléchargerez l'ensemble de l'édition.   
 <br>
 <br>
 <br>
