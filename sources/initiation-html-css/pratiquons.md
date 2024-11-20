@@ -1,7 +1,7 @@
 # Pratiquons les bases du code HTML et CSS
 
 ## Template
-Téléchargez le template pour pratiquer individuellement en cliquant <a href="../../assets/Documents/Initiation-html-css.zip" download="">ici</a>
+Téléchargez le template pour pratiquer individuellement en cliquant <a href="https://github.com/milenelaforge/milenelaforge.github.io/blob/main/sources/docs-to-download/Initiation-html-css.zip" download="">ici</a>
 
 ## Ouverture
 Une fois téléchargé, vous devez l'ouvrir de deux façons 
@@ -21,8 +21,8 @@ Il existe deux façons de modifier le code :
      * Tester les modifications. Une fois que vous avez modifié le CSS, les changements seront appliqués en temps réel à la page web. Vous pouvez voir comment les modifications affectent l'apparence de l'élément sélectionné et de la page dans son ensemble. C'est ce qui correspond à WYSIWYG (What You See Is What You Get) un concept utilisé dans différents logiciels et éditeurs qui permet aux utilisateurs de visualiser le résultat final de leur travail à l'écran pendant qu'ils le créent ou le modifient.
      * Sauvegarder les modifications. Malheureusement, vous ne pouvez pas enregistrer directement vos modifications CSS dans les fichiers sources de la page à partir de l'inspecteur Chrome. Les modifications que vous apportez dans l'inspecteur sont temporaires et seront perdues dès que vous actualisez la page ou fermez l'inspecteur. Pour enregistrer les modifications, vous devrez les reporter dans votre propre feuille de style CSS en dehors de l'inspecteur en faisant Clic droit > Copy rule.
 <br>
-<img src="../assets/Images/pratiquons-01.png" height="400"/>
-<img src="../assets/Images/pratiquons-02.png" height="400"/>
+<img src="https://raw.githubusercontent.com/milenelaforge/milenelaforge.github.io/refs/heads/main/sources/Images/pratiquons-01.png" height="400"/>
+<img src="https://raw.githubusercontent.com/milenelaforge/milenelaforge.github.io/refs/heads/main/sources/Images/pratiquons-02.png" height="400"/>
 
 
 

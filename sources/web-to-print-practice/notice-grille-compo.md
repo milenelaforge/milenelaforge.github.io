@@ -167,7 +167,7 @@ Une page box se compose de deux types de zones:
 1. La page area
 2. Les margin boxes  
 
-<img src="../assets/Images/margin-boxes.png" width="700"/>
+<img src="https://raw.githubusercontent.com/milenelaforge/milenelaforge.github.io/refs/heads/main/sources/Images/margin-boxes.png" width="700"/>
 
 La page area est la zone de contenu d'une page. C'est l'espace dans lequel tout le contenu HTML sera inséré. Lorsque ce contenu n'a plus de place, une autre page est automatiquement créée.  
 <br>

@@ -33,9 +33,6 @@ fondant PrePostPrint. Les enjeux de PPP sont multiples, aujourd’hui PPP peut �
 l’envie d’expérimenter et de partager des approches alternatives de la publication, de l’édition et de la production d’objets imprimés. C’est une communauté de pratiques, 
 un espace d’entraide, de partage d’expériences, d’outils et d’usages, profondément ancré dans le mouvement du libre. 
 <br><br>
-<img src="sources/Images/ppp.png" width="500"/>
-<img src="../Images/ppp.png" width="500"/>
-<img src="../../Images/ppp.png" width="500"/>
 <img src="https://raw.githubusercontent.com/milenelaforge/milenelaforge.github.io/refs/heads/main/sources/Images/ppp.png" width="500"/>
 <br>
 Sur le site vous pouvez retrouver cette description : 
@@ -51,7 +48,7 @@ Les outils utilisés pour réaliser l'objet et, si possible, le contenu de l'obj
 DOCUMENTÉ
 L'objet est documenté selon les critères de PrePostPrint, puis publié sur le site prepostprint.org.
 <br>
-[Lien vers le site de PrePostPrint - PPP](https://prepostprint.org/)
+[Lien vers le site de PrePostPrint - PPP](https://prepostprint.org/)<br>
 [Lien vers le wiki de PrePostPrint](https://wiki.prepostprint.org/index.php?title=Main_Page)
 
 

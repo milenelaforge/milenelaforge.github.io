@@ -92,7 +92,7 @@ CSS (nommé styles.css)
 }
 ```
 ### 3. Dans deux fichiers css externes  
-### Dossier à télécharger <a href="../assets/Documents/medias-screen-print.zip" download="">ici</a>
+### Dossier à télécharger <a href="https://github.com/milenelaforge/milenelaforge.github.io/blob/main/sources/docs-to-download/medias-screen-print.zip" download="">ici</a>
 
 HTML 
 ```html

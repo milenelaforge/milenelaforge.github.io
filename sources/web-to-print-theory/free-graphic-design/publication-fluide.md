@@ -12,7 +12,7 @@ Depuis qu’il est possible d’exporter des PDFs à partir d’une page web, le
 
 Faire de la mise en page dans un navigateur web et avec des langages HTML et CSS permet non seulement de travailler de manière cartésienne, avec des pages « fixes », aux contours bien définis, dans lesquelles les contenus sont positionnés également de manière « fixes », comme avec les logiciels de mise en page Scribus, InDesign et QuarkXPress. Mais il est aussi possible de travailler avec les propriétés spécifiques aux écrans, à savoir leur potentiel à s’adapter aux différents formats et reformattages des fenêtres de visualisation, leur interactivité, etc.
 <br>
-<img src="https://raw.githack.com/milenelaforge/milenelaforge.github.io/main/sources/images/html-css-ecran-print_©Loraine-Furter.png"/>
+<img src="https://raw.githubusercontent.com/milenelaforge/milenelaforge.github.io/refs/heads/main/sources/Images/html-css-ecran-print_©Loraine-Furter.png"/>
 
 Il devient alors possible de travailler plusieurs formats sur base de la même source, stylée différement pour les différents écrans et formats papier (single source publishing) Ici, on pourrait repenser les dichotomies écran/papier, développement d’outils/travail graphique…
 
@@ -21,5 +21,5 @@ Les langages HTML, CSS et Javascript sont sous license libre, ce qui permet non 
 
 Travailler avec ces outils permet également d’établir une chaîne de travail basée sur une source principale, dans un écosystème libre, standard et durable:
 <br>
-<img src="../../images/hybrid-HTML-schema_©Loraine-Furter.png"/>
+<img src="https://raw.githubusercontent.com/milenelaforge/milenelaforge.github.io/refs/heads/main/sources/Images/hybrid-HTML-schema_©Loraine-Furter.png"/>
 

@@ -1,7 +1,7 @@
 # Choix de fabrication
 
 ## Chemin de fer 
-<img src="../assets/Images/Chemindefer.png" style="width:750px"/>
+<img src="https://raw.githubusercontent.com/milenelaforge/milenelaforge.github.io/refs/heads/main/sources/Images/Chemindefer.png" style="width:750px"/>
 
 ## Fabrication
 ### Formats 
